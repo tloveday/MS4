@@ -13,23 +13,90 @@
         {% block corecss %}
             <!-- Bootstrap CSS & JS-->
             <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+             <!-- Font Awesomw-->
+            <script src="https://kit.fontawesome.com/cbf695508f.js" crossorigin="anonymous"></script>    
         {% endblock %}
       
         {% block corejs%}
+             <!-- Bootstrap CSS & JS-->
             <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+             <!-- JQuery-->
             <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
         {% endblock %}
         
         <title>Teifi TKD {% block extra_title %} {% endblock %}</title>
     </head>
     <body>
-        <header class="container-fluid fixed-top"></header>
+        <header class="container-fluid fixed-top">
+            <div class="row">
+                <div class="col-12 col-lg-4 my-auto py-1 py-lg-0 float-start-lg">
+                    <a href="{% url 'home' %}" class="nav-link main-logo-link">
+                        <h2 class="my-0">Teifi Taekwondo</h2>
+                    </a>
+                </div>
+                <div class="col-12 col-lg-4 my-auto py-1 py-lg-0 ">
+                    <form method="GET" action="">
+                        <div class="input-group w-100">
+                            <input type="text" name="q" placeholder="Searching for your answers" class="form-control border border-black rouned-0">
+                            <div class="input-group-append">
+                                <button class="form-control btn btn-dark border border-black rounded-0" type="submit">
+                                    <span class="icon">
+                                        <i class="fas fa-search"></i>
+                                    </span>
+                                </button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="col-12 col-lg-4 my-auto py-1 py-lg-0 ">
+                    <ul class="list-inline list-unstyled text-center text-lg-right my-0">
+                        <li class="list-inline-item dropdown">
+                            <a href="" id="user-account" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="nav-lnk text-dark">
+                                <div class="text-center">
+                                    <div><i class="fas fa-user fa-lg"></i></div>
+                                    <p class="my-0">My Account</p>
+                                </div>
+                            </a>
+                            <div class="dropdown-menu border-0" aria-labelledby="user-account">
+                                {% if request.user.is_authenticated %}
+                                    {% if request.user.is_superuser %}
+                                        <a href="#" class="dropdown-item">Shop Management</a>
+                                        <a href="#" class="dropdown-item">News Management</a>
+                                    {% endif %}
+                                    <a href="#" class="dropdown-item">My Profile</a>
+                                    <a href="{% url 'account_logout' %}" class="dropdown-item">Sign Out</a>
+                                {% else %}
+                                    <a href="{% url 'account_signup' %}" class="dropdown-item">Register</a>
+                                    <a href="{% url 'account_login' %}" class="dropdown-item">Sign In</a>
+                                {% endif %}
+                            </div>
+                        </li>
+                        <li class="list-inline-item">
+                            <a href="" class="nav-link {% if grand_total %}text-info font-weight-bold{% else %}text-dark{% endif %}">
+                                <div class="text-center">
+                                    <div><i class="fas fa-shopping-bag fa-lg"></i></div>
+                                    <p class="my-0">
+                                        {% if grand_total %}
+                                            £{{ grand_total|floatformat:2  }}
+                                        {% else %}
+                                            £0.00
+                                        {% endif %}
+                                    </p>
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </header>
        
         {% if messages %}
             <div class="message-container"></div>
         {% endif %}
 
         {% block page_header %}
+        
+        
         {% endblock %}
 
         {% block content %}
