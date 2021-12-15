@@ -1,0 +1,28 @@
+html{
+    height: 100%;
+}
+
+/* Landing Page -Index.html- */
+.jumbotron-section{
+    background: url('/media/images//hero1.png') no-repeat center center;
+    background-size: cover;
+    height: inherit;
+    width: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    position: fixed;
+}
+
+/* Bulma */
+.icon{
+    align-items: center;
+    display: inline-flex;
+    justify-content: center;
+    height: 1.5rem;
+    width: 1.5rem;
+}
+
+/* Media Queries */
