@@ -29,10 +29,10 @@
     </head>
     <body>
         <header class="container-fluid fixed-top">
-            <div class="row">
+            <div id="top-nav" class="row pt-lg-2 d-none d-lg-flex">
                 <div class="col-12 col-lg-4 my-auto py-1 py-lg-0 float-start-lg">
                     <a href="{% url 'home' %}" class="nav-link main-logo-link">
-                        <h2 class="my-0">Teifi Taekwondo</h2>
+                        <img class="logo" src="/media/images//logo.png" alt="Teifi Taekwondo Logo">
                     </a>
                 </div>
                 <div class="col-12 col-lg-4 my-auto py-1 py-lg-0 ">
@@ -54,8 +54,8 @@
                         <li class="list-inline-item dropdown">
                             <a href="" id="user-account" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="nav-lnk text-dark">
                                 <div class="text-center">
-                                    <div><i class="fas fa-user fa-lg"></i></div>
-                                    <p class="my-0">My Account</p>
+                                    <div><i class="fas fa-user fa-lg red"></i></div>
+                                    <p class="my-0 red">My Account</p>
                                 </div>
                             </a>
                             <div class="dropdown-menu border-0" aria-labelledby="user-account">
@@ -73,7 +73,7 @@
                             </div>
                         </li>
                         <li class="list-inline-item">
-                            <a href="" class="nav-link {% if grand_total %}text-info font-weight-bold{% else %}text-dark{% endif %}">
+                            <a href="" class="nav-link {% if grand_total %}text-info font-weight-bold{% else %}blue{% endif %}">
                                 <div class="text-center">
                                     <div><i class="fas fa-shopping-bag fa-lg"></i></div>
                                     <p class="my-0">
@@ -89,6 +89,44 @@
                     </ul>
                 </div>
             </div>
+            <div class="row blue">
+                <nav class="navbar navbar-expand-lg navbar-light bg-light w-100">
+                    <ul class="nav">
+                        <li class="nav-item">
+                          <a class="nav-link active" aria-current="page" href="#">Home</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                          <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">Classes</a>
+                          <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">Tigers</a></li>
+                            <li><a class="dropdown-item" href="#">Kids</a></li>
+                            <li><a class="dropdown-item" href="#">Adults</a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item" href="#">Kickboxing</a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item" href="#">Ladies</a></li>
+                          </ul>
+                        </li>
+                        <li class="nav-item">
+                          <a class="nav-link" href="#">Team</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">Learn</a>
+                            <ul class="dropdown-menu">
+                              <li><a class="dropdown-item" href="#">Taekwondo</a></li>             
+                              <li><a class="dropdown-item" href="#">Kickboxing</a></li>
+                              <li><a class="dropdown-item" href="#">Ladies</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">News</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Shop
+                        </li>
+                </nav>
+            </div>
+
         </header>
        
         {% if messages %}
@@ -96,8 +134,6 @@
         {% endif %}
 
         {% block page_header %}
-        
-        
         {% endblock %}
 
         {% block content %}

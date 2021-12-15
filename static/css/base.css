@@ -3,18 +3,15 @@ html{
 }
 
 /* Landing Page -Index.html- */
-.jumbotron-section{
-    background: url('/media/images//hero1.png') no-repeat center center;
-    background-size: cover;
-    height: inherit;
-    width: 100%;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    position: fixed;
+.red{
+    color: #f3101f !important;
 }
+.blue{
+    color: #0063a1 !important;
+}
+
+/* Landing Page -Index.html- */
+
 
 /* Bulma */
 .icon{
@@ -25,4 +22,15 @@ html{
     width: 1.5rem;
 }
 
+.logo{
+    align-items: center;
+    
+    height: 6rem;
+    width: 6rem;
+}
+
+
+.li{
+    text-decoration: none;
+}
 /* Media Queries */
