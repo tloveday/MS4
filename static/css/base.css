@@ -1,17 +1,24 @@
 html{
     height: 100%;
 }
-
+body{
+    height: calc(100vh - 164px);
+}
 /* Landing Page -Index.html- */
 .red{
     color: #f3101f !important;
+}
+.bg-red{
+    background: #f3101f !important;
 }
 .blue{
     color: #0063a1 !important;
 }
 
 /* Landing Page -Index.html- */
-
+.main-nav{
+    background-color: #f3101f;
+}
 
 /* Bulma */
 .icon{
@@ -34,3 +41,15 @@ html{
     text-decoration: none;
 }
 /* Media Queries */
+
+@media (min-width: 1200px){
+    .container {
+        max-width: 80%;
+    }
+}
+
+@media (min-width: 992px){
+    .header-container {
+        padding-top: 164px;
+    }
+}
