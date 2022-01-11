@@ -10,65 +10,85 @@
 {% endblock %}
 
 {% block content %}
-    <div id="classes-reel" class="carousel slide" data-bs-ride="carousel">
-        <div class="carousel-indicators">
-            <button type="button" data-bs-target="#classes-reel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-            <button type="button" data-bs-target="#classes-reel" data-bs-slide-to="1" aria-label="Slide 2"></button>
-            <button type="button" data-bs-target="#classes-reel" data-bs-slide-to="2" aria-label="Slide 3"></button>
-            <button type="button" data-bs-target="#classes-reel" data-bs-slide-to="3" aria-label="Slide 4"></button>
-        </div>
-        <div class="carousel-inner">
-            <div class="carousel-item active">
-                <div class="col-8">
-                    <img src="/media/images/tiger1.png" class="img-fluid" alt="Tigers Class Training">
-                <div class="col-4">
-                    <a class="btn btn-primary" href="#" role="button">Classes</a>
-                    <a class="btn btn-primary" href="#" role="button">Learn</a>
-                    <a class="btn btn-primary" href="#" role="button">Book A Session</a>
-                </div>
-            </div>    
-        </div>
-        <div class="carousel-inner">
-            <div class="carousel-item">
-                <div class="col-8">
-                    <img src="/media/images/junior1.png" class="img-fluid" alt="Juniors Class Training">
-                <div class="col-4">
-                    <a class="btn btn-primary" href="#" role="button">Classes</a>
-                    <a class="btn btn-primary" href="#" role="button">Learn</a>
-                    <a class="btn btn-primary" href="#" role="button">Book A Session</a>
-                </div>
-            </div>    
-        </div>
-        <div class="carousel-inner">
-            <div class="carousel-item">
-                <div class="col-8">
-                    <img src="/media/images/senior1.png" class="img-fluid" alt="Adults Class Training">
-                <div class="col-4">
-                    <a class="btn btn-primary" href="#" role="button">Classes</a>
-                    <a class="btn btn-primary" href="#" role="button">Learn</a>
-                    <a class="btn btn-primary" href="#" role="button">Book A Session</a>
-                </div>
-            </div>    
-        </div>
-        <div class="carousel-inner">
-            <div class="carousel-item">
-                <div class="col-8">
-                    <img src="/media/images/ladies3.png" class="img-fluid" alt="Ladies Class Training">
-                <div class="col-4">
-                    <a class="btn btn-primary" href="#" role="button">Classes</a>
-                    <a class="btn btn-primary" href="#" role="button">Learn</a>
-                    <a class="btn btn-primary" href="#" role="button">Book A Session</a>
-                </div>
-            </div>    
-        </div>
-        <button class="carousel-control-prev" type="button" data-bs-target="#classes-reel" data-bs-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Previous</span>
-        </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#classes-reel" data-bs-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Next</span>
-        </button>
-    </div>
+<h1>Welcome to Teifi Taekwondo</h1>
+<h3>Our Classes</h3>
 
+<div class="row row-cols-1 row-cols-md-2 g-4">
+    <div class="col">
+      <div class="card h-100">
+          <div class="row g-0">
+              <div class="col-md-6">
+                  <img src="/media/images/tiger1.png" class="img-fluid rounded-start" alt="Tigers Students Training">
+                </div>
+                <div class="col-md-4">
+                    <div class="card-body">
+                        <h5 class="card-title class-title">Tigers Classes</h5>
+                        <p class="class-info"> Our Tigers are our youngest classes run for Children aged _ & _</p>
+                        <p>Training Time<span> Wednesday</span></p>
+                        <a class="btn btn-primary" href="#" role="button">Classes</a>
+                        <a class="btn btn-primary" href="#" role="button">Learn</a>
+                        <a class="btn btn-primary" href="#" role="button">Book A Session</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col">
+        <div class="card h-100">
+            <div class="row g-0">
+                <div class="col-md-6">
+                    <img src="/media/images/junior1.png" class="img-fluid rounded-start" alt="Junior Students in Training">
+                  </div>
+                  <div class="col-md-4">
+                      <div class="card-body">
+                          <h5 class="card-title class-title">Junior Classes</h5>
+                          <p class="class-info">For students aged __ __</p>
+                          <p>Training Time<span> Wednesday</span></p>
+                          <a class="btn btn-primary" href="#" role="button">Classes</a>
+                          <a class="btn btn-primary" href="#" role="button">Learn</a>
+                          <a class="btn btn-primary" href="#" role="button">Book A Session</a>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+      <div class="col">
+        <div class="card h-100">
+            <div class="row g-0">
+                <div class="col-md-6">
+                    <img src="/media/images/senior1.png" class="img-fluid rounded-start" alt="Our Senior Students in Training">
+                  </div>
+                  <div class="col-md-4">
+                      <div class="card-body">
+                          <h5 class="card-title class-title">Seniors</h5>
+                          <p class="class-info"> Students aged ___</p>
+                          <p>Training Time<span> Wednesday</span></p>
+                          <a class="btn btn-primary" href="#" role="button">Classes</a>
+                          <a class="btn btn-primary" href="#" role="button">Learn</a>
+                          <a class="btn btn-primary" href="#" role="button">Book A Session</a>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+      <div class="col">
+        <div class="card h-100">
+            <div class="row g-0">
+                <div class="col-md-6">
+                    <img src="/media/images/ladies3.png" class="img-fluid rounded-start" alt="Some of our ladies in Training">
+                  </div>
+                  <div class="col-md-4">
+                      <div class="card-body">
+                          <h5 class="card-title class-title">Ladies Only Classes</h5>
+                          <p class="class-info"> A Ladies only class for students aged 14+</p>
+                          <p>Training Time<span> Wednesday</span></p>
+                          <a class="btn btn-primary" href="#" role="button">Classes</a>
+                          <a class="btn btn-primary" href="#" role="button">Learn</a>
+                          <a class="btn btn-primary" href="#" role="button">Book A Session</a>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+</div>
 {% endblock %}
