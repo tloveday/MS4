@@ -1,0 +1,327 @@
+[
+    {
+      "pk": 1,
+      "model": "products.product",
+      "fields": {
+          "sku": "tt0000000001",
+          "name": "Children's Dobok",
+          "description": "65% Poly 35% Cotton. ITF style with quality velcro closure and the back is fully embroidered with international Taekwondo in english and Korean. Trousers have elastic/cord waist and both legs have embroidered ITF",
+          "price": 25.99,
+          "category": 1,
+          "image_url": "",
+          "image": "kidsdobok.png"
+        }
+    },
+    {
+      "pk": 2,
+      "model": "products.product",
+      "fields": {
+          "sku": "tt0000000002",
+          "name": "Adult's Dobok",
+          "description": "65% Poly 35% Cotton. ITF style with quality velcro closure and the back is fully embroidered with international Taekwondo in english and Korean. Trousers have elastic/cord waist and both legs have embroidered ITF.",
+          "price": 31.99,
+          "category": 1,
+          "image_url": "",
+          "image": "adultdobok.png"
+        }
+    },
+    {
+      "pk": 3,
+      "model": "products.product",
+      "fields": {
+          "sku": "tt0000000003",
+          "name": "Black Belt Dobok",
+          "description": "65% Poly 35% Cotton. Black belt trim along the bottom of jacket.ITF style with quality velcro closure and the back is fully embroidered with international Taekwondo in english and Korean. Trousers have elastic/cord waist and both legs have embroidered ITF - Wear it with pride after earning your black belt.”",
+          "price": 34.99,
+          "category": 1,
+          "image_url": "",
+          "image": "blackdobok.png"
+        }
+    },
+    {
+      "pk": 4,
+      "model": "products.product",
+      "fields": {
+          "sku": "tt0000000004",
+          "name": "Children's Tefi TKD T-Shirt",
+          "description": "A perfect way to show your love for Teifi taekwondo, this shirt is made of cotton and polyester. It is lightweight and breathable, perfect for wearing in the training heat. It has a standard fit and is designed with a crew neck, and includes our custom logo.",
+          "price": 10.00,
+          "category": 2,
+          "image_url": "",
+          "image": "kidshirt.png"
+        }
+    },
+    {
+      "pk": 5,
+      "model": "products.product",
+      "fields": {
+          "sku": "tt0000000005",
+          "name": "Adult's Tefi TKD T-Shirt",
+          "description": "A perfect way to show your love for Teifi taekwondo, this shirt is made of cotton and polyester. It is lightweight and breathable, perfect for wearing in the training heat. It has a standard fit and is designed with a crew neck, and includes our custom logo.",
+          "price": 15.00,
+          "category": 2,
+          "image_url": "",
+          "image": "adultshirt.png"
+        }
+    },
+    {
+      "pk": 6,
+      "model": "products.product",
+      "fields": {
+          "sku": "tt0000000006",
+          "name": "Ladies' Tefi TKD T-Shirt",
+          "description": "A perfect way to show your love for Teifi taekwondo, this shirt is made of cotton and polyester. It is lightweight and breathable, perfect for wearing in the training heat. It has a standard fit and is designed with a crew neck, and includes our custom logo just for ladies.",
+          "price": 15.00,
+          "category": 2,
+          "image_url": "",
+          "image": "ladiesshirt.png"
+        }
+    },
+    {
+      "pk": 7,
+      "model": "products.product",
+      "fields": {
+          "sku": "tt0000000007",
+          "name": "Children's Teifi TKD Hoody",
+          "description": "Wear to class over your Dobok or show off your club outside of the Dojang with our Teifi Taekwondo Hoody. The hoody is a regular fit top designed to keep you warm and cosy. The pull over top includes our custom logo, a thick draw-cord, adjustable, hood for extra protection and features a kangaroo-style pocket pouch at the front This incredibly soft hooded top is made from a cotton/polyester LFS fleece and includes long sleeves with ribbed, draught-excluding, cuffs and hem.",
+          "price": 25.00,
+          "category": 2,
+          "image_url": "",
+          "image": "comingsoon.png"
+        }
+    },
+    {
+      "pk": 8,
+      "model": "products.product",
+      "fields": {
+          "sku": "tt0000000008",
+          "name": "Adult's Teifi TKD Hoody",
+          "description": "Wear to class over your Dobok or show off your club outside of the Dojang with our Teifi Taekwondo Hoody. The hoody is a regular fit top designed to keep you warm and cosy. The pull over top includes our custom logo, a thick draw-cord, adjustable, hood for extra protection and features a kangaroo-style pocket pouch at the front This incredibly soft hooded top is made from a cotton/polyester LFS fleece and includes long sleeves with ribbed, draught-excluding, cuffs and hem.",
+          "price": 30.00,
+          "category": 2,
+          "image_url": "",
+          "image": "comingsoon.png"
+        }
+    },
+    {
+      "pk": 9,
+      "model": "products.product",
+      "fields": {
+          "sku": "tt0000000009",
+          "name": "Ladies' Teifi TKD Hoody",
+          "description": "Wear to class over your Dobok or show off your club outside of the Dojang with our Teifi Taekwondo Hoody. The hoody is a regular fit top designed to keep you warm and cosy. The pull over top includes our custom ladies logo, a thick draw-cord, adjustable, hood for extra protection and features a kangaroo-style pocket pouch at the front This incredibly soft hooded top is made from a cotton/polyester LFS fleece and includes long sleeves with ribbed, draught-excluding, cuffs and hem.",
+          "price": 30.00,
+          "category": 2,
+          "image_url": "",
+          "image": "comingsoon2.png"
+        }
+    },
+    {
+      "pk": 10,
+      "model": "products.product",
+      "fields": {
+          "sku": "tt0000000010",
+          "name": "Blitz Dipped Foam Gloves",
+          "description": "Moulded to fit securely to the knuckles with an elastic Velcro wrap strap around the wrist. Lightweight and compact, the special dipped foam material absorbs blows, knocks and impact. Ideal for young students. Made from soft EVA foam, dipped in a PVC resin, and vacuum moulded to finish. Easy to wipe clean before and after use.",
+          "price": 35.99,
+          "category": 3,
+          "image_url": "",
+          "image": "dippedgloves.png"
+        }
+    },
+    {
+      "pk": 11,
+      "model": "products.product",
+      "fields": {
+          "sku": "tt0000000011",
+          "name": "Blitz Semi Contact Open Palm Gloves",
+          "description": "Made from Nama Hide™ Leather, this semi contact open palm glove is specifically designed for semi contact, full contact or bag work. Used in clubs across the UK, this glove includes an adjustable, elasticated, Velcro strap for perfect fit and comfort. Easy to wipe clean before and after use",
+          "price": 34.99,
+          "category": 3,
+          "image_url": "",
+          "image": "semigloves.png"
+        }
+    },
+    {
+      "pk": 12,
+      "model": "products.product",
+      "fields": {
+          "sku": "tt0000000012",
+          "name": "Blitz Dipped Foam Foot Guards",
+          "description": "he shock absorbing foam foot guards offer great protection during kicking techniques. Made from a soft EVA foam dipped in PVC resin, and vacuum moulded to finish, the foot guards are contoured to cover the majority of the foot, with cut-outs around the achilles and instep for ease of movement. The tongue and heel of the guards feature ventilation holes for air flow and to prevent moisture build-up, keeping the wearer cool. The elasticated Velcro wrap-around strap provides a secure and comfortable fit. The bottom of the foot guard also includes two reinforced elasticated straps to hold the foot in place and, open areas at the heel, ball of the foot and toes for a solid grip on flooring. Easy to wipe clean before and after use.",
+          "price": 35.99,
+          "category": 3,
+          "image_url": "",
+          "image": "dippedfoot.png"
+        }
+    },
+    {
+      "pk": 13,
+      "model": "products.product",
+      "fields": {
+          "sku": "tt0000000013",
+          "name": "Blitz Semi Contact Foot Protectors",
+          "description": "Made from tough, anti-slip Nama Hide™ Leather, this semi contact foot protector is specifically designed for Teifi Taekwondo’s teachings. A wrap-around Velcro strap at the back and elastic strap underneath improves comfort and fit to enhance performance. Easy to wipe clean before and after use.",
+          "price": 33.99,
+          "category": 3,
+          "image_url": "",
+          "image": "semifoot.png"
+        }
+    },
+    {
+      "pk": 14,
+      "model": "products.product",
+      "fields": {
+          "sku": "tt0000000014",
+          "name": "Blitz Dipped Foam Shin Guards",
+          "description": "The shock absorbing foam shin guards offer the ultimate protection when sparring. Made from a soft EVA foam dipped in PVC resin, and vacuum moulded to finish, the guards are contoured to cover the majority of the shin. The front of the shin features ventilation holes for air flow and to prevent moisture build-up, keeping the wearer cool. Securely fastens with two elasticated wrap-around Velcro fastenings for a comfortable fit. Easy to wipe clean before and after use.",
+          "price": 33.99,
+          "category": 3,
+          "image_url": "",
+          "image": "dippedshin.png"
+        }
+    },
+    {
+      "pk": 15,
+      "model": "products.product",
+      "fields": {
+          "sku": "tt0000000015",
+          "name": "Blitz Fusion Shin Guards",
+          "description": "Blitz Fusion Shin Guards provide the ultimate shock absorption against the hardest impact and a rapid recovery after use. The high density foam, with additional padding on the shin, features a non-abrasive inner lining that mould perfectly to your shin for extreme comfort. The two adjustable Velcro straps to the back of the shin guards allow for a secure and precise fit, keeping them firmly in place without any movement. Nama Hide™ Leather, that's easy to wipe clean before and after use.",
+          "price": 31.99,
+          "category": 3,
+          "image_url": "",
+          "image": "semishin.png"
+        }
+    },
+    {
+      "pk": 16,
+      "model": "products.product",
+      "fields": {
+          "sku": "tt0000000016",
+          "name": "Blitz Dipped Head Guard",
+          "description": "The shock absorbing foam head guard is designed to absorb high impact blows to the forehead, ears and rear of the head when sparring. The head guard is specifically shaped to reduce uncomfortable neck pressure at the back and includes ear guards for the ultimate protection. Made from a soft EVA foam dipped in PVC resin, and vacuum moulded to finish, the head guard also features ventilation holes for air flow and to prevent moisture build-up, keeping the wearer cool. Securely fastens with an elastic Velcro strap under the chin for a comfortable and easy adjustable fit. Easy to wipe clean before and after use.",
+          "price": 38.99,
+          "category": 3,
+          "image_url": "",
+          "image": "dippedhead.png"
+        }
+    },
+    {
+      "pk": 17,
+      "model": "products.product",
+      "fields": {
+          "sku": "tt0000000017",
+          "name": "Blitz Club Semi Contact Head Guard",
+          "description": "Constructed from Nama Hide™ Leather, this semi contact head guard includes a Velcro cross design fastening on top of the head and a Velcro strap under the chin for a compact, comfortable and precise fit. Ear sections are bound, safeguarding your ears. A breathable, moisture absorbing, anti-microbial lining is also included to retain freshness. Easy to wipe clean before and after use. Latex free.",
+          "price": 28.99,
+          "category": 3,
+          "image_url": "",
+          "image": "semihead.png"
+        }
+    },
+    {
+      "pk": 18,
+      "model": "products.product",
+      "fields": {
+          "sku": "tt0000000018",
+          "name": "Teifi Taekwondo Annual Membership",
+          "description": "Annual Membership to Teifi Teakwondo which to cover insurance for students.",
+          "price": 30.00,
+          "category": 4,
+          "image_url": "",
+          "image": "membership.png"
+        }
+    },
+    {
+      "pk": 19,
+      "model": "products.product",
+      "fields": {
+          "sku": "tt0000000019",
+          "name": "Session Fees - 1 Class a Week",
+          "description": "Train once a week in any of our age appropriate classes - £5.00 a class. Paid Monthly",
+          "price": 20.00,
+          "category": 4,
+          "image_url": "",
+          "image": "sessionpass1.png"
+        }
+    },
+    {
+      "pk": 20,
+      "model": "products.product",
+      "fields": {
+          "sku": "tt0000000020",
+          "name": "Session Fees - 2 Classes a Week",
+          "description": "Train twice a week in any of our age appropriate classes - £4.50 a class. Paid Monthly",
+          "price": 36.00,
+          "category": 4,
+          "image_url": "",
+          "image": "sessionpass2.png"
+        }
+    },
+    {
+      "pk": 21,
+      "model": "products.product",
+      "fields": {
+          "sku": "tt0000000021",
+          "name": "Family Fight Pass- 1 Class a Week",
+          "description": "For Three students from the same family household. Students train once a week in any of our age appropriate classes  Students do not need to attend the same sessions (Example 1 in Tigers, 1 in Juniors, 1 in Adult/Ladies) -  £4.50 a class. Paid Monthly",
+          "price": 54.00,
+          "category": 4,
+          "image_url": "",
+          "image": "familypass1.png"
+        }
+    },
+    {
+      "pk": 22,
+      "model": "products.product",
+      "fields": {
+          "sku": "tt0000000022",
+          "name": "Family Fight Pass- 2 Classes a Week",
+          "description": "For Three students from the same family household. Students train twice a week in any of our age appropriate classes  Students do not need to attend the same sessions (Example 1 in Tigers, 1 in Juniors, 1 in Adult/Ladies) -  £4.50 a class. Paid Monthly",
+          "price": 96.00,
+          "category": 4,
+          "image_url": "",
+          "image": "familypass2.png"
+        }
+    },
+    {
+      "pk": 23,
+      "model": "products.product",
+      "fields": {
+          "sku": "tt0000000023",
+          "name": "Ladies Training Package",
+          "description": "With up to 4 adults classes a week (both Seniors and Ladies Only) this offer allows you to train up to 3 times in any combination over a week. We’d love to offer you four times in a week but even we suggest some time away from the Dojang - £4.00 a class. Paid Monthly",
+          "price": 48.00,
+          "category": 4,
+          "image_url": "",
+          "image": "ladiestraining.png"
+        }
+    },
+    {
+      "pk": 24,
+      "model": "products.product",
+      "fields": {
+          "sku": "tt0000000024",
+          "name": "GUP Grading Fees",
+          "description": "Fees required to undertake testing for your next belt There are 4 coloured belt gradings a year. Every March, June, September and December. Only purchase this in agreement with your instructor.",
+          "price": 20.00,
+          "category": 4,
+          "image_url": "",
+          "image": "gupgrading.png"
+        }
+    },
+    {
+      "pk": 25,
+      "model": "products.product",
+      "fields": {
+          "sku": "tt0000000025",
+          "name": "DAN Grading Fees",
+          "description": "Fees required to undertake testing for your DAN Grade. Only purchase this in agreement with your instructor.",
+          "price": 30.00,
+          "category": 4,
+          "image_url": "",
+          "image": "dangrading.png"
+        }
+    }
+   ]
