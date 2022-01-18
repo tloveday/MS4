@@ -13,7 +13,8 @@
     <div class="container-fluid">
         <div class="row">
             <div class="col text-center">
-                <h2>Shop</h2>
+                <hr class="w-75 mb-1">
+                <h2 class="title">Shop</h2>
                 {% for c in current_categories %}
                     <a href="{% url 'products' %}?category={{c.name}}" class="text-decoration-none">
                         <span class="badge rounded-pill bg-info text-light">{{c.friendly_name}}</span>
