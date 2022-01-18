@@ -39,11 +39,11 @@
                 Shop
             </a>
             <div class="dropdown-menu border-0" aria-labelledby="shop-link">
-                <a href="" class="dropdown-item">Uniforms</a>
-                <a href="" class="dropdown-item ">Clothing</a>
-                <a href="" class="dropdown-item ">Sparring Gear</a>
-                <a href="" class="dropdown-item">Fees</a>
-                <a href="{% url 'products' %}" class="dropdown-item">All Products</a>
+                <a href="{% url 'products' %}?uniform" class="dropdown-item">Uniform</a>
+                <a href="{% url 'products' %}?clothing" class="dropdown-item ">Clothing</a>
+                <a href="{% url 'products' %}?category=sparring_equipment" class="dropdown-item ">Sparring Gear</a>
+                <a href="{% url 'products' %}?category=fees" class="dropdown-item">Fees</a>
+                <a href="{% url 'products' %}?category=uniform,clothing,sparring_equipment,fees" class="dropdown-item">All Products</a>
             </div>
         </li>
     </ul>
