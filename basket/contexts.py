@@ -1,18 +1,31 @@
+from django.shortcuts import get_object_or_404
+from products.models import Product
 
 
 def basket_contents(request):
 
     basket_items = []
     total = 0
-    products_count = 0
+    product_count = 0
+    basket = request.session.get('basket', {})
 
-    grand_total = total
+    
+
+    for item_id, quantity in basket.items():
+        product = get_object_or_404(Product, pk=item_id)
+        total += quantity * product.price
+        product_count += quantity
+        basket_items.append({
+            'item__id': item_id,
+            'quantity': quantity,
+            'product': product,
+        })
 
     context = {
         'basket_items': basket_items,
         'total': total,
-        'products_count': products_count,
-        'grand_total': grand_total,
+        'product_count': product_count,
+        'grand_total': total,
     }
 
     return context
