@@ -44,8 +44,16 @@ body{
     text-decoration: none;
 }
 
-.carousel{
-    max-height: 250px;
+.to-top-button{
+    height: 42px;
+    width: 42px;
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+}
+
+.to-top-button{
+    cursor: pointer;
 }
 
 /* Media Queries */
