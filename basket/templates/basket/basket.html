@@ -41,14 +41,44 @@
                                 <td class="py-3">
                                     <p class="my-0"><strong>{{ item.product.name }}</strong></p>
                                     <p class="my-0"><strong>Size:</strong>{% if item.product.has_sizes %}{{ item.size|upper}}{% else %}N/A{% endif %}</p>
-                                    <p class="my-0"><strong>Colour:</strong>{% if item.product.has_colours %}{{ item.colour|upper}}{% else %}N/A{% endif %}</p>
                                     <p class="my-0 small txt-muted">SKU: {{ item.product.sku|upper }}</p>
                                 </td>
                                 <td class="py-3">
                                     <p class="my-0">£{{ item.product.price }}</p>
                                 </td>
                                 <td class="py-3">
-                                    <p class="my-0">{{ item.quantity }}</p>
+                                   <form class="form update-form" action="" method="post">
+                                       {% csrf_token %}
+                                        <div class="form-group ">
+                                            <div class="input-group">
+                                                <div class="input-group-prepend">
+                                                    <button class="btn btn-outline-dark btn-sm btn-blue text-light rounded-start decrease-qty"
+                                                        data-item_id="{{ item.item_id }}" id="decrease-qty_{{ item.item_id }}">
+                                                        <span>
+                                                            <i class="fas fa-minus fa-sm"></i>
+                                                        </span>
+                                                    </button>
+                                                </div>
+                                                <input type="number" class="form-control form-control-sm qty_input"
+                                                    name="quantity" value="{{ item.quantity }}" min="1" max="99"
+                                                    data-item_id="{{ item.item_id }}"
+                                                    id="id_qty_{{ item.item_id }}">
+                                                <div class="input-group-append">
+                                                    <button class="btn btn-outline-dark btn-sm btn-blue text-light rounded-end increase-qty"
+                                                        data-item_id="{{ item.item_id }}" id="increase-qty_{{ item.item_id }}">
+                                                        <span>
+                                                            <i class="fas fa-plus fa-sm"></i>
+                                                        </span>
+                                                    </button>
+                                                </div>
+                                                {% if item.product.has_sizes %}
+                                                    <input type="hidden" name="product_size" value="{{ item.size }}">
+                                                {% endif %}
+                                            </div>
+                                        </div>
+                                   </form>
+                                   <a class="update-link blue"><small>Update</small></a>
+                                   <a class="remove-item red float-end" id="remove_{{ item.item_id }}" data-size="{{ item.size}}"><small>Remove</small></a>
                                 </td>
                                 <td class="py-3">
                                     <p class="my-0">£{{ item.product.price }}</p>
@@ -62,13 +92,13 @@
                             </tr>
                             <tr>
                                 <td colspan="5" class="text-right">
-                                    <a href="{% url 'products' %}" class="btn btn-outline-dark rounded-3 btn-lg">
+                                    <a href="{% url 'products' %}" class="btn btn-outline-dark btn-red text-light rounded-3 btn-lg">
                                         <span class="icon">
                                             <i class="fas fa-arrow-left"></i>
                                         </span>
                                         <span class="text-uppercase">Return to Shopping</span>
                                     </a>
-                                    <a href="{% url 'products' %}" class="btn btn-outline-dark rounded-3 btn-lg">
+                                    <a href="{% url 'products' %}" class="btn btn-outline-dark btn-blue text-light rounded-3 btn-lg">
                                         <span class="text-uppercase">Secure Checkout</span>
                                         <span class="icon">
                                             <i class="fas fa-lock"></i>
@@ -80,14 +110,82 @@
                     </div>
                 {% else  %}
                     <p class="lead mb-5">Your Basket is empty</p>
-                    <a href="{% url 'products' %}" class="btn btn-outline-dark rounded-3 btn-lg">
+                    <a href="{% url 'products' %}" class="btn btn-outline-dark btn-red text-light rounded-3 btn-lg">
                         <span class="icon">
                             <i class="fas fa-arrow-left"></i>
                         </span>
-                        <span class="text-uppercase">Return to Shopping</span>
+                        <span class="text-uppercase ">Return to Shopping</span>
                     </a>
                 {% endif%}
             </div>
         </div>
     </div>
+{% endblock %}
+
+{% block js_postload %}
+{{ block.super }}
+<script type="text/javascript">
+
+    // Prevent +/- buttons from taking quantity below min-max values
+    function handleEnableDisable(itemId) {
+        var currentValue = parseInt($(`#id_qty_${itemId}`).val());
+        var minusDisabled = currentValue < 2;
+        var plusDisabled = currentValue > 98;
+        $(`#decrease-qty_${itemId}`).prop('disabled', minusDisabled);
+        $(`#increase-qty_${itemId}`).prop('disabled', plusDisabled);
+    }
+
+    // Ensure proper enabling/disabling of all inputs on page load
+    var allQtyInputs = $('.qty_input');
+    for(var i = 0; i < allQtyInputs.length; i++){
+        var itemId = $(allQtyInputs[i]).data('item_id');
+        handleEnableDisable(itemId);
+    }
+
+    // Check enable/disable when input is changed
+    $('.qty_input').change(function() {
+        var itemId = $(this).data('item_id');
+        handleEnableDisable(itemId);
+    });
+
+    // Increase quantity
+    $('.increase-qty').click(function(e) {
+       e.preventDefault();
+       var closestInput = $(this).closest('.input-group').find('.qty_input')[0];
+       var currentValue = parseInt($(closestInput).val());
+       $(closestInput).val(currentValue + 1);
+       var itemId = $(this).data('item_id');
+       handleEnableDisable(itemId);
+    });
+
+    // Decrease quantity
+    $('.decrease-qty').click(function(e) {
+       e.preventDefault();
+       var closestInput = $(this).closest('.input-group').find('.qty_input')[0];
+       var currentValue = parseInt($(closestInput).val());
+       $(closestInput).val(currentValue - 1);
+       var itemId = $(this).data('item_id');
+       handleEnableDisable(itemId);
+    });
+</script>
+<script type="text/javascript">
+    // Update quantity when clicked
+    $('.update-link').click(function(e){
+        var form = $(this).prev('.update-form');
+        form.submit();
+    })
+    // Remove item from basket and reload clicked
+    $('.remove-item').click(function(e){
+        var csfrToken = "{{ csfr_token }}"
+        var itemId = $(this).attr('id').split('remove_')[1];
+        var size = $(this).data('size');
+        var url = `bag/remove/$(itemID)`;
+        var data = {'csrfmiddlewaretoken': csrfToken, 'size': size};
+        
+        $.post(url, data)
+            .done(function(){
+                location.reload();
+            })
+    })
+</script>
 {% endblock %}

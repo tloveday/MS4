@@ -78,7 +78,9 @@ body{
     right: 10px;
 }
 
-.to-top-button{
+.to-top-button,
+.update-link,
+.remove-item{
     cursor: pointer;
 }
 
