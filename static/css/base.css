@@ -4,7 +4,7 @@ html{
 body{
     height: calc(100vh - 164px);
 }
-/* Landing Page -Index.html- */
+/* Colours - */
 .red{
     color: #f3101f !important;
 }
@@ -15,7 +15,33 @@ body{
     color: #0063a1 !important;
 }
 .bg-blue{
-    color: #0063a1 !important;
+    background: #0063a1 !important;
+}
+.yellow{
+    color: #f3e016 !important;
+}
+.bg-yellow{
+    background: #f3e016 !important;
+}
+.pink{
+    color: #ff6bac !important;
+}
+.bg-pink{
+    background: #ff6bac !important;
+}
+
+/* Buttons- */
+.btn-blue{
+    background: #0063a1 !important;
+}
+.btn-red{
+    background: #f3101f !important;
+}
+.btn-yellow{
+    background: #f3e016 !important;
+}
+.btn-pink{
+    background: #ff6bac !important;
 }
 
 /* Landing Page -Index.html- */
