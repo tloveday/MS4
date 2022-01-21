@@ -1,10 +1,14 @@
+
 html{
     height: 100%;
 }
 body{
     height: calc(100vh - 164px);
 }
-/* Colours - */
+/* - Font - */
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+/* -  Colours - */
 .red{
     color: #f3101f !important;
 }
@@ -30,7 +34,7 @@ body{
     background: #ff6bac !important;
 }
 
-/* Buttons- */
+/* - Buttons- */
 .btn-blue{
     background: #0063a1 !important;
 }
@@ -44,7 +48,7 @@ body{
     background: #ff6bac !important;
 }
 
-/* Landing Page -Index.html- */
+/* - Landing Page -Index.html- */
 .main-nav{
     background-color: #f3101f;
 }
@@ -84,7 +88,7 @@ body{
     cursor: pointer;
 }
 
-/* Media Queries */
+/* - Media Queries - */
 
 @media (min-width: 1200px){
     .container {

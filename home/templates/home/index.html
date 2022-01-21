@@ -10,93 +10,102 @@
 {% endblock %}
 
 {% block content %}
-<h1>Welcome to Teifi Taekwondo</h1>
-<h3>Our Classes</h3>
+<hr>
+<h1 class="text-center">Welcome to Teifi Taekwondo</h1>
+<hr>
+<h3 class="text-center">Our Classes</h3>
 
 <div class="row row-cols-1 row-cols-md-2 g-4">
     <div class="col">
       <div class="card h-100">
           <div class="row g-0">
-            <div class="card-header text-center bg-yellow">
-                <h5 class="card-title text-dark class-title">Tigers</h5>
-            </div>
-            <div class="col-md-6">
+                <div class="card-header text-center bg-yellow">
+                    <h5 class="card-title text-dark class-title">Tigers</h5>
+                </div>
+                <div class="col-md-6">
                   <img src="/media/images/tiger1.png" class="img-fluid rounded-start" alt="Tigers Students Training">
                 </div>
                 <div class="col-md-4">
                     <div class="card-body">
                         <p class="class-info"> Aimed at our littlest ninjas (aged 4-6). Our Tiger Class teaches the basics of Taekwondo through a variety of games - They will not realise they are learning. However what they will realise is how fun it is.</p>
                         <p>Training Time<span> Wednesday</span></p>
-                        <a class="btn btn-primary" href="#" role="button">Classes</a>
-                        <a class="btn btn-primary" href="#" role="button">Learn</a>
-                        <a class="btn btn-primary" href="{% url 'products' %}?category=fees" role="button">Book A Session</a>
                     </div>
                 </div>
-            </div>
+                <div class="card-footer text-center">
+                    <a class="btn btn-primary" href="#" role="button">Classes</a>
+                    <a class="btn btn-primary" href="#" role="button">Learn</a>
+                    <a class="btn btn-primary" href="{% url 'products' %}?category=fees" role="button">Book A Session</a>
+                </div>
+            </div>        
         </div>
     </div>
     <div class="col">
         <div class="card h-100">
             <div class="row g-0">
-                <div class="card-header text-center bg-blue">
-                    <h5 class="card-title text-light class-title">Juniors</h5>
-                </div>
-                <div class="col-md-6">
-                    <img src="/media/images/junior1.png" class="img-fluid rounded-start" alt="Junior Students in Training">
+                  <div class="card-header text-center bg-blue">
+                      <h5 class="card-title text-light class-title">Juniors</h5>
+                  </div>
+                  <div class="col-md-6">
+                    <img src="/media/images/junior1.png" class="img-fluid img-class rounded-start" alt="Junior Students Training">
                   </div>
                   <div class="col-md-4">
                       <div class="card-body">
-                          <p class="class-info">Our junior classes are perfect for children aged 6 – 13 years old. They will have fun and meet other children with similar interests, whilst learning skills that will transcend the classroom.</p>
+                          <p class="class-info"> EDIT THIS</p>
                           <p>Training Time<span> Wednesday</span></p>
-                          <a class="btn btn-primary" href="#" role="button">Classes</a>
-                          <a class="btn btn-primary" href="#" role="button">Learn</a>
-                          <a class="btn btn-primary" href="{% url 'products' %}?category=fees" role="button">Book A Session</a>
                       </div>
                   </div>
-              </div>
+                  <div class="card-footer text-center">
+                      <a class="btn btn-primary" href="#" role="button">Classes</a>
+                      <a class="btn btn-primary" href="#" role="button">Learn</a>
+                      <a class="btn btn-primary" href="{% url 'products' %}?category=fees" role="button">Book A Session</a>
+                  </div>
+              </div>        
           </div>
       </div>
-      <div class="col">
+    <div class="col">
         <div class="card h-100">
             <div class="row g-0">
-                <div class="card-header text-center bg-red">
-                    <h5 class="card-title text-light class-title">Seniors</h5>
-                </div>
-                <div class="col-md-6">
-                    <img src="/media/images/senior1.png" class="img-fluid rounded-start" alt="Our Senior Students in Training">
+                  <div class="card-header text-center bg-red">
+                      <h5 class="card-title text-white class-title">Seniors</h5>
+                  </div>
+                  <div class="col-md-6">
+                    <img src="/media/images/senior1.png" class="img-fluid img-class rounded-start" alt="Senior Students Training">
                   </div>
                   <div class="col-md-4">
                       <div class="card-body">
-                          <h5 class="card-title class-title">Seniors</h5>
-                          <p class="class-info">Studying martial arts is something that anybody – at any age or fitness level – can do. Our taekwondo classes are fun, empowering, and provide a great workout for adults, building core strength and cardiovascular fitness in a fun, social setting.</p>
+                          <p class="class-info"> EDIT ME</p>
                           <p>Training Time<span> Wednesday</span></p>
-                          <a class="btn btn-primary" href="#" role="button">Classes</a>
-                          <a class="btn btn-primary" href="#" role="button">Learn</a>
-                          <a class="btn btn-primary" href="{% url 'products' %}?category=fees" role="button">Book A Session</a>
                       </div>
                   </div>
-              </div>
+                  <div class="card-footer text-center">
+                      <a class="btn btn-primary" href="#" role="button">Classes</a>
+                      <a class="btn btn-primary" href="#" role="button">Learn</a>
+                      <a class="btn btn-primary" href="{% url 'products' %}?category=fees" role="button">Book A Session</a>
+                  </div>
+              </div>        
           </div>
       </div>
-      <div class="col">
+    <div class="col">
         <div class="card h-100">
             <div class="row g-0">
-                <div class="card-header text-center bg-pink">
-                    <h5 class="card-title text-light class-title">Ladies only</h5>
-                </div>
-                <div class="col-md-6">
-                    <img src="/media/images/ladies3.png" class="img-fluid rounded-start" alt="Some of our ladies in Training">
+                  <div class="card-header text-center bg-pink">
+                      <h5 class="card-title text-dark class-title">Ladies</h5>
+                  </div>
+                  <div class="col-md-6">
+                    <img src="/media/images/ladies3.png" class="img-fluid img-class rounded-start" alt="Ladies Students Training">
                   </div>
                   <div class="col-md-4">
                       <div class="card-body">
-                          <p class="class-info">Our women’s only classes are designed to teach you Taekwondo skills while our female instructor team puts you through a great workout and you leave every session feeling a little more confident from your new skills!</p>
+                          <p class="class-info"> EDIT THIS</p>
                           <p>Training Time<span> Wednesday</span></p>
-                          <a class="btn btn-primary" href="#" role="button">Classes</a>
-                          <a class="btn btn-primary" href="#" role="button">Learn</a>
-                          <a class="btn btn-primary" href="{% url 'products' %}?category=fees" role="button">Book A Session</a>
                       </div>
                   </div>
-              </div>
+                  <div class="card-footer text-center">
+                      <a class="btn btn-primary" href="#" role="button">Classes</a>
+                      <a class="btn btn-primary" href="#" role="button">Learn</a>
+                      <a class="btn btn-primary" href="{% url 'products' %}?category=fees" role="button">Book A Session</a>
+                  </div>
+              </div>        
           </div>
       </div>
 </div>
