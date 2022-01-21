@@ -15,17 +15,26 @@ body{
 .bg-red{
     background: #f3101f !important;
 }
+.arrow-red{
+    color: #f3101f !important;
+}
 .blue{
     color: #0063a1 !important;
 }
 .bg-blue{
     background: #0063a1 !important;
 }
+.arrow-blue{
+    color: #0063a1 !important;
+}
 .yellow{
     color: #f3e016 !important;
 }
 .bg-yellow{
     background: #f3e016 !important;
+}
+.arrow-yellow{
+    color: #f3e016 !important;
 }
 .pink{
     color: #ff6bac !important;
@@ -53,7 +62,7 @@ body{
     background-color: #f3101f;
 }
 
-/* Bulma */
+/* - Bulma - */
 .icon{
     align-items: center;
     display: inline-flex;
@@ -69,7 +78,25 @@ body{
     width: 6rem;
 }
 
+/* - Toasts - */
+.message-container{
+    position: fixed;
+    top: 72px;
+    right: 15px;
+    z-index: 999999;
+}
 
+.custom-toast{
+    overflow: visible;
+}
+
+.toast-capper{
+    height: 2px;
+    
+}
+
+
+/* - Others - */
 .li{
     text-decoration: none;
 }
