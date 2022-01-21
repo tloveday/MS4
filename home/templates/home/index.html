@@ -17,17 +17,19 @@
     <div class="col">
       <div class="card h-100">
           <div class="row g-0">
-              <div class="col-md-6">
+            <div class="card-header text-center bg-yellow">
+                <h5 class="card-title text-dark class-title">Tigers</h5>
+            </div>
+            <div class="col-md-6">
                   <img src="/media/images/tiger1.png" class="img-fluid rounded-start" alt="Tigers Students Training">
                 </div>
                 <div class="col-md-4">
                     <div class="card-body">
-                        <h5 class="card-title class-title">Tigers Classes</h5>
                         <p class="class-info"> Aimed at our littlest ninjas (aged 4-6). Our Tiger Class teaches the basics of Taekwondo through a variety of games - They will not realise they are learning. However what they will realise is how fun it is.</p>
                         <p>Training Time<span> Wednesday</span></p>
                         <a class="btn btn-primary" href="#" role="button">Classes</a>
                         <a class="btn btn-primary" href="#" role="button">Learn</a>
-                        <a class="btn btn-primary" href="#" role="button">Book A Session</a>
+                        <a class="btn btn-primary" href="{% url 'products' %}?category=fees" role="button">Book A Session</a>
                     </div>
                 </div>
             </div>
@@ -36,17 +38,19 @@
     <div class="col">
         <div class="card h-100">
             <div class="row g-0">
+                <div class="card-header text-center bg-blue">
+                    <h5 class="card-title text-light class-title">Juniors</h5>
+                </div>
                 <div class="col-md-6">
                     <img src="/media/images/junior1.png" class="img-fluid rounded-start" alt="Junior Students in Training">
                   </div>
                   <div class="col-md-4">
                       <div class="card-body">
-                          <h5 class="card-title class-title">Junior Classes</h5>
                           <p class="class-info">Our junior classes are perfect for children aged 6 – 13 years old. They will have fun and meet other children with similar interests, whilst learning skills that will transcend the classroom.</p>
                           <p>Training Time<span> Wednesday</span></p>
                           <a class="btn btn-primary" href="#" role="button">Classes</a>
                           <a class="btn btn-primary" href="#" role="button">Learn</a>
-                          <a class="btn btn-primary" href="#" role="button">Book A Session</a>
+                          <a class="btn btn-primary" href="{% url 'products' %}?category=fees" role="button">Book A Session</a>
                       </div>
                   </div>
               </div>
@@ -55,6 +59,9 @@
       <div class="col">
         <div class="card h-100">
             <div class="row g-0">
+                <div class="card-header text-center bg-red">
+                    <h5 class="card-title text-light class-title">Seniors</h5>
+                </div>
                 <div class="col-md-6">
                     <img src="/media/images/senior1.png" class="img-fluid rounded-start" alt="Our Senior Students in Training">
                   </div>
@@ -65,7 +72,7 @@
                           <p>Training Time<span> Wednesday</span></p>
                           <a class="btn btn-primary" href="#" role="button">Classes</a>
                           <a class="btn btn-primary" href="#" role="button">Learn</a>
-                          <a class="btn btn-primary" href="#" role="button">Book A Session</a>
+                          <a class="btn btn-primary" href="{% url 'products' %}?category=fees" role="button">Book A Session</a>
                       </div>
                   </div>
               </div>
@@ -74,17 +81,19 @@
       <div class="col">
         <div class="card h-100">
             <div class="row g-0">
+                <div class="card-header text-center bg-pink">
+                    <h5 class="card-title text-light class-title">Ladies only</h5>
+                </div>
                 <div class="col-md-6">
                     <img src="/media/images/ladies3.png" class="img-fluid rounded-start" alt="Some of our ladies in Training">
                   </div>
                   <div class="col-md-4">
                       <div class="card-body">
-                          <h5 class="card-title class-title">Ladies Only Classes</h5>
                           <p class="class-info">Our women’s only classes are designed to teach you Taekwondo skills while our female instructor team puts you through a great workout and you leave every session feeling a little more confident from your new skills!</p>
                           <p>Training Time<span> Wednesday</span></p>
                           <a class="btn btn-primary" href="#" role="button">Classes</a>
                           <a class="btn btn-primary" href="#" role="button">Learn</a>
-                          <a class="btn btn-primary" href="#" role="button">Book A Session</a>
+                          <a class="btn btn-primary" href="{% url 'products' %}?category=fees" role="button">Book A Session</a>
                       </div>
                   </div>
               </div>
