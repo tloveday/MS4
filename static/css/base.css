@@ -15,9 +15,7 @@ body{
 .bg-red{
     background: #f3101f !important;
 }
-.arrow-red{
-    color: #f3101f !important;
-}
+
 .blue{
     color: #0063a1 !important;
 }
@@ -91,11 +89,45 @@ body{
 }
 
 .toast-capper{
-    height: 2px;
-    
+    height: 2px;   
+}
+
+/* from CSS-tricks.com: https://css-tricks.com/snippets/css/css-triangle/ */
+.arrow-up {
+    width: 0; 
+    height: 0; 
+    border-left: 4px solid transparent;
+    border-right: 4px solid transparent; 
+    border-bottom: 10px solid black;
+    position: absolute;
+    top: -10px;
+    right: 36px;
+}
+
+/* - Arrow Colour - 'Success' Taken from Boostrap - */
+.arrow-red{
+    color: #f3101f !important;
+    border-bottom-color: #f3101f !important;
+}
+.arrow-blue{
+    color: #0063a1 !important;
+    border-bottom-color: #0063a1 !important;
+}
+.arrow-success{
+    color: #28a745 !important;
+    border-bottom-color: #28a745 !important;
+}
+.arrow-yellow{
+    color: #f3e016 !important;
+    border-bottom-color: #f3e016 !important;
 }
 
 
+.basket-notification-wrapper {
+    height: 100px;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
 /* - Others - */
 .li{
     text-decoration: none;
