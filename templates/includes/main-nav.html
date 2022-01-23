@@ -5,8 +5,8 @@
                 Home
             </a>
         </li>
-        <li class="nav-item dropdown">
-            <a class="logo-font font-weight-bold nav-link text-light mr-5" href="#" id="classes-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        <li class="list-inline-item dropdown">
+            <a class="nav-link text-light" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">
                 Classes
             </a>
             <div class="dropdown-menu border-0" aria-labelledby="classes-link">
@@ -21,27 +21,25 @@
                 Our Team
             </a>
         </li>
-        <li class="nav-item dropdown">
-            <a class="logo-font font-weight-bold nav-link text-light mr-5" href="#" id="learn-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        <li class="list-inline-item dropdown">
+            <a class="nav-link text-light" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">
                 Learn
             </a>
             <div class="dropdown-menu border-0" aria-labelledby="learn-link">
-                <a href="" class="dropdown-item">Taekwondo</a>
                 <a href="" class="dropdown-item">Tigers Taekwondo</a>
                 <a href="" class="dropdown-item ">Juniors Taekwondo</a>
                 <a href="" class="dropdown-item ">Adults Taekwondo</a>
                 <a href="" class="dropdown-item">Ladies Taekwondo</a>
-                
             </div>
         </li>
-        <li class="nav-item dropdown">
-            <a class="logo-font font-weight-bold nav-link text-light mr-5" href="{% url 'products' %}" id="shop-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        <li class="list-inline-item dropdown">
+            <a class="logo-font font-weight-bold nav-link text-light mr-5" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">
                 Shop
             </a>
             <div class="dropdown-menu border-0" aria-labelledby="shop-link">
-                <a href="{% url 'products' %}?uniform" class="dropdown-item">Uniform</a>
-                <a href="{% url 'products' %}?clothing" class="dropdown-item ">Clothing</a>
-                <a href="{% url 'products' %}?category=sparring_equipment" class="dropdown-item ">Sparring Gear</a>
+                <a href="{% url 'products' %}?category=uniform" class="dropdown-item">Uniform</a>
+                <a href="{% url 'products' %}?category=clothing" class="dropdown-item ">Clothing</a>
+                <a href="{% url 'products' %}?category=sparring_equipment" class="dropdown-item ">Sparring Equipment</a>
                 <a href="{% url 'products' %}?category=fees" class="dropdown-item">Fees</a>
                 <a href="{% url 'products' %}?category=uniform,clothing,sparring_equipment,fees" class="dropdown-item">All Products</a>
             </div>

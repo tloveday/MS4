@@ -57,7 +57,7 @@
                 <div class="col-12 col-lg-4 my-auto py-1 py-lg-0">
                     <ul class="list-inline list-unstyled text-center text-lg-right my-0">
                         <li class="list-inline-item dropdown">
-                            <a class="text-black nav-link" href="#" id="user-options" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <a class="nav-link text-dark" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">
                                 <div class="text-center">
                                     <div><i class="fas fa-user fa-lg"></i></div>
                                     <p class="my-0">My Account</p>
@@ -75,7 +75,7 @@
                                     <a href="{% url 'account_login' %}" class="dropdown-item">Sign In</a>
                                 {% endif %}
                             </div>
-                        </li>
+                          </li>
                         <li class="list-inline-item">
                             <a class="{% if grand_total %}text-info font-weight-bold{% else %}text-black{% endif %} nav-link" href="{% url 'view_basket' %}">
                                 <div class="text-center">
@@ -130,7 +130,10 @@
 
         {% block js_postload %}
         <script>
-            $('.toast').toast('show');
+            var toastElList = [].slice.call(document.querySelectorAll('.toast'))
+            var toastList = toastElList.map(function (toastEl) {
+            return new bootstrap.Toast(toastEl, option)
+            })
         </script>
         {% endblock %}
         

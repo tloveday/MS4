@@ -1,8 +1,8 @@
-<div class="toast custom-toast rouned-3 border-top-0" data-autohide="false">
-    <div class="arrow-up arrow-success"></div>
-    <div class="w-100 tast-capper bg-yellow"></div>
+<div role="alert" aria-live="assertive" aria-atomic="true" class="toast custom-toast rounded-3 border-top-0" data-bs-autohide="false">
+    <div class="arrow-up arrow-yellow"></div>
+    <div class="w-100 toast-capper bg-yellow"></div>
     <div class="toast-header bg-white text-dark">
-        <strong class="mr-auto toast-name">WARNING!</strong>
+        <strong class="mr-auto toast-name">ALERT!</strong>
         <button type="button" class="m1-2 mb-1 close text-dark" data-dismiss="toast" aria-label="Close">
             <span aria-hidden="true">&times;</span>
         </button>
@@ -11,6 +11,7 @@
         <div class="row">
             <div class="col">
                 {{ message }}
+                <hr class="mt-2 mb-3 w-50">
             </div>
         </div>
     </div>
