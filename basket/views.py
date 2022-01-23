@@ -32,7 +32,7 @@ def add_to_basket(request, item_id):
                 messages.success(request, f'Added size {size.upoer()} {product.name} to the basket')
         else:
             basket[item_id] = {'items_by_size': {size: quantity}}
-            messages.success(request, f'Added size {size.upoer()} {product.name} to the basket')
+            messages.success(request, f'Added size {size.upper()} {product.name} to the basket')
     else:
         if item_id in list(basket.keys()):
             basket[item_id] += quantity
