@@ -70,8 +70,8 @@
                     {% csrf_token %}
                     <fieldset class="rounded px-3 mb-5">
                         <legend class="fieldset-label small text-dark px-2 w-auto">Details</legend>
-                        {{ order_form.full_name | as_crispy_field}}
-                        {{ order_form.email | as_crispy_field}}
+                        <div class="mb-2">{{ order_form.full_name | as_crispy_field}}</div>
+                        <div class="mb-2">{{ order_form.email | as_crispy_field}}</div>
                     </fieldset>
                     
                     <fieldset class="rounded px-3 mb-5">
@@ -108,4 +108,11 @@
             <hr>
         </div>
     </div>
+{% endblock %}
+
+{% block js_postload %}
+    {{ block.super}}
+    {{ stripe_public_key|json_script:"id_stripe_public_key" }}
+    {{ client_secret|json_script:"id_client_secret" }}
+    <script src="{% static 'checkout/js/stripe_elements.js' %}"></script>
 {% endblock %}
