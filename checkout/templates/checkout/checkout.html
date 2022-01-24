@@ -49,17 +49,17 @@
                             <p class="my-0 small"><strong>Size:</strong>{% if item.product.has_sizes %}{{ item.size|upper}}{% else %}N/A{% endif %}</p>
                             <p class="my-0 small txt-muted">Qty: {{ item.quantity }}</p>
                         </div>
-                        <div class="col-3 text-right">
+                        <div class="col-3 float-right">
                             <p class="my-0 small text-muted">£{{ item.product.price | calc_subtotal:item.quantity }}</p>
                         </div>
                     </div>
                 {% endfor %}
                 <hr class="my-0">
-                <div class="row text-dark text-right">
+                <div class="row text-dark float-end">
                     <div class="col-7 offset-2">
                         <p class="my-0"><strong>Grand Total</strong></p>
                     </div>
-                    <div class="col-3">
+                    <div class="col-3 text-dark float-end">
                         <p class="my-0"><strong>£ {{ grand_total | floatformat:2 }}</strong></p>
                     </div>
                 </div>
