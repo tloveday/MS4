@@ -1,0 +1,99 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block extra_css %}
+    <link rel="stylesheet" href="{% static 'checkout/css/checkout.css' %}">
+{% endblock %}
+
+{% block page_header %}
+    <div class="container header-container">
+        <div class="row">
+            <div class="col"></div>
+        </div>
+    </div>
+{% endblock %}
+
+{% block content %}
+    <div class="container">
+        <div class="row">
+            <div class="col text-center">
+                <hr>
+                <h2 class="title mb-4">Thank You</h2>
+                <hr>
+                <p>Your Order Information can be found below.</p>
+                <p>A Confirmation Email will be sent t <strong>{{ order.email }}</strong>.</p>
+            </div>
+        </div>
+        <!-- Order Information -->
+        <div class="row">
+            <div class="col-12 col-lg-8">
+                <div class="order-confirmation-wrapper p-2 border">
+                    <div class="row">
+                        <div class="col">
+                            <small class="text-muted">Order info:</small>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-12 col-md-4">
+                            <p class="mb-1 text-dark">Order Number:</p>
+                            
+                        </div>
+                        <div class="col-12 col-md-8 text-md-right">
+                            <p class="mb-1">{{ order.order_number }}</p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-12 col-md-4">
+                            <p class="mb-1 text-dark">Order Date:</p>
+                            
+                        </div>
+                        <div class="col-12 col-md-8 text-md-right">
+                            <p class="mb-1">{{ order.date }}</p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <small class="text-muted">Order Details:</small>
+                        </div>
+                    </div>
+                    {% for item in order.lineitems.all %}
+                    <div class="row">
+                        <div class="col-12 col-md-4">
+                            <p class="small mb-1 text-dark">
+                                {{ item.product.name }}{% if item.product_size %} - Size: {{ item.product_size|upper}}{% endif %}
+                            </p>
+                            
+                        </div>
+                        <div class="col-12 col-md-8 text-md-right">
+                            <p class=" small mb-1">{{ item.quantity }} @ £{{ item.product.price }} each</p>
+                        </div>
+                    </div>
+                    {% endfor %}
+                    <div class="row">
+                        <div class="col">
+                            <small class="text-muted">Billing Infomation:</small>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <p class="mb-1">You have been charged:</p>
+                        <div class="col-12 col-md-4">
+                            <p class="mb-1 text-dark">Order Total:</p>
+                        </div>
+                        <div class="col-12 col-md-8 text-md-right">
+                            <p class="mb-1">{{ order.order_total }}</p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <small class="text-muted">Collection:</small>
+                        </div>
+                        <div class="col-12">
+                            <p class="mb-1">You can collect your items from your Instructor at your next session</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
+
