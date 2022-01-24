@@ -23,7 +23,7 @@ body{
     background: #0063a1 !important;
 }
 .text-blue{
-    background: #0063a1 !important;
+    color: #0063a1 !important;
 }
 .yellow{
     color: #f3e016 !important;
@@ -146,6 +146,7 @@ body{
 .remove-item{
     cursor: pointer;
 }
+
 
 /* - Media Queries - */
 
