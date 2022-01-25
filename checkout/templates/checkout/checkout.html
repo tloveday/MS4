@@ -76,12 +76,12 @@
                     <fieldset class="rounded px-3 mb-5">
                         <legend class="fieldset-label small text-dark px-2 w-auto">Billing Details</legend>
                         <div class="mb-2">{{ order_form.phone_number | as_crispy_field }}</div>
-                        <div class="mb-2">{{ order_form.country | as_crispy_field }}</div>
-                        <div class="mb-2">{{ order_form.postcode | as_crispy_field }}</div>
-                        <div class="mb-2">{{ order_form.town_or_city | as_crispy_field }}</div>
                         <div class="mb-2">{{ order_form.street_address1 | as_crispy_field }}</div>
                         <div class="mb-2">{{ order_form.street_address2 | as_crispy_field }}</div>
+                        <div class="mb-2">{{ order_form.town_or_city | as_crispy_field }}</div>
                         <div class="mb-2">{{ order_form.county | as_crispy_field }}</div>
+                        <div class="mb-2">{{ order_form.postcode | as_crispy_field }}</div>
+                        <div class="mb-0">{{ order_form.country | as_crispy_field }}</div>
                         <div class="form-check form-check-inline float-right mr-0">
 							{% if user.is_authenticated %}
 								<label class="form-check-label" for="id-save-info">Save this information to my profile</label>
