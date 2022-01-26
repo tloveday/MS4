@@ -1,0 +1,19 @@
+/* This enables input fields in the profiile form to match the rest of the site.*/
+
+#profile-update-form .form-contol{
+    color: #000 !important;
+}
+
+#profile-update-form input::placeholder{
+    color: #aab5d7 !important;
+}
+
+/* To further emable the country selector to match and implement the code- the static/profiles/js/countries.js was set up */
+#id_default_country,
+#id_default_country option:not(:first-child){
+    color: #000;
+}
+
+#id_default_country option:first-child{
+    color: #aab5d7 !important;
+}
