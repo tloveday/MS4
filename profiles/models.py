@@ -7,7 +7,7 @@ from django_countries.fields import CountryField
 
 
 class UserProfile(models.Model):
-    # Profile model for keeping order history and detail 
+    # Profile model for keeping order history and detail
     user = models.OneToOneField(User, on_delete=models.CASCADE)
     default_phone_number = models.CharField(max_length=20, null=True, blank=True)
     default_town_or_city = models.CharField(max_length=40, null=True, blank=True)
@@ -26,5 +26,5 @@ def create_or_update_user_profile(sender, instance, created, **kwargs):
     # Create or update User Profile
     if created:
         UserProfile.objects.create(user=instance)
-    #Existing Users- Save Profile
+    # Existing Users- Save Profile
     instance.userprofile.save()

@@ -17,3 +17,10 @@
 #id_default_country option:first-child{
     color: #aab5d7 !important;
 }
+
+/* Order Summary */
+.order-history{
+    max-height: 416px;
+    overflow-y: auto;
+
+}

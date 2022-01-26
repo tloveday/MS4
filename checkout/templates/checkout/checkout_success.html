@@ -162,14 +162,37 @@
                             <p class="mb-1">{{ order.grand_total }}</p>
                         </div>
                     </div>
-                    <div class="row">
-                        <div class="col">
-                            <small class="text-muted">Collection:</small>
+                    {% if from_profile %}
+                        <div class="row">
+                            <div class="col">
+                                <a href="{% url 'profile %}" class="btn btn-outline-dark btn-red text-light mt-3 rounded-3">
+                                    <span class="icon">
+                                        <i class="fas fa-arrow-left"></i>
+                                    </span>
+                                    <span class="text-uppercase">Back to Profile</span>
+                                </a>
+                            </div>
                         </div>
-                        <div class="col-12">
-                            <p class="small mb-1 text-dark">You can collect your items from your Instructor at your next session</p>
+                    {% else %}
+                        <div class="row">
+                            <div class="col">
+                                <small class="text-muted">Collection:</small>
+                            </div>
+                            <div class="col-12 col-lg-6 offset-lg-3">
+                                <p class="small mb-1 text-dark">You can collect your items from your Instructor at your next session</p>
+                            </div>
                         </div>
-                    </div>
+                        <div class="row">
+                            <div class="col">
+                                <a href="{% url 'products' %}" class="btn btn-outline-dark btn-red text-light mt-3 rounded-3">
+                                    <span class="icon">
+                                        <i class="fas fa-arrow-left"></i>
+                                    </span>
+                                    <span> Return to Shopping </span>
+                                </a>
+                            </div>
+                        </div>
+                    {% endif %}
                 </div>
             </div>
         </div>
