@@ -63,7 +63,7 @@ class StripeWH_Handler:
         username = intent.metadata.username
         if username != 'AnonymousUser':
             profile = UserProfile.objects.get(user__username=username)
-            if save_info
+            if save_info():
                 profile.default_phone_number = billing_details.phone,
                 profile.save()
 
@@ -74,8 +74,8 @@ class StripeWH_Handler:
             try:
                 order = Order.objects.get(
                     full_name__iexact=billing_details.name,
-                    user_profile=profile
-                    email__iexact=billing_details.email,
+                    user_profile=profile,
+                    email=billing_details.email,
                     phone_number=billing_details.phone,
                     grand_total=grand_total,
                     original_basket=basket,
