@@ -12,33 +12,31 @@ import time
 
 
 class StripeWH_Handler:
-    #Handle Stripe webhooks
+    # Handle Stripe webhooks
 
     def __init__(self, request):
         self.request = request
 
-
     def _send_confirmation_email(self, order):
-        #Send users confirmation emails
+        # Send users confirmation emails
         cust_email = order.email
         subject = render_to_string(
             'checkout/confirmation_emails/confirmation_email_subject.txt',
-            {'order':order})
+            {'order': order})
         body = render_to_string(
             'checkout/confirmation_emails/confirmation_email_body.txt',
-            {'order':order, 'contact_email': settings.DEFAULT_FROM_EMAIL})
-        
+            {'order': order,
+            'contact_email': settings.DEFAULT_FROM_EMAIL})
+
         send_mail(
             subject,
-            message,
+            body,
             settings.DEFAULT_FROM_EMAIL,
             [cust_email]
         )
 
-
-
     def handle_event(self, event):
-        #Handle an unexpected-unknown webhook events
+        # Handle an unexpected-unknown webhook events
         return HttpResponse(
             content=f'Unhandled webhook received: {event["type"]}',
             status=200)
@@ -54,10 +52,10 @@ class StripeWH_Handler:
         grand_total = round(intent.charges.data[0].amount / 100, 2)
 
         # Clean info in billing details
-        for field , value in billing_details.address.items():
+        for field, value in billing_details.address.items():
             if value == "":
-                billing_details = none
-        
+                billing_details = None
+
         # Update profile infomation if save_info is checked
         profile = None
         username = intent.metadata.username
@@ -66,7 +64,6 @@ class StripeWH_Handler:
             if save_info():
                 profile.default_phone_number = billing_details.phone,
                 profile.save()
-
 
         order_exists = False
         attempt = 1
