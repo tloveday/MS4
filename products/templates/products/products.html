@@ -70,7 +70,23 @@
                                             </a>
                                         </p>
                                     {% endif %}
-                                    <p class="mb-0 text-left font-weight-bold">£{{ product.price }}</p>
+                                    <p class="mb-0 text-left blue">£{{ product.price }}</p>
+                                    {% if request.user.is_superuser %}
+                                        <div class="card-footer bg-transparent">
+                                            <a href="{% url 'edit_product' product.id %}" class=" mt-2 btn btn-outline-dark btn-yellow text-dark rounded-3 btn-sm">
+                                                <span class="icon">
+                                                    <i class="far fa-edit"></i>
+                                                </span>
+                                                <span class="">Edit Product</span>
+                                            </a>
+                                            <a href="{% url 'delete_product' product.id %}" class=" mt-2 btn btn-outline-dark btn-red text-light rounded-3 btn-sm">
+                                                <span class="icon">
+                                                    <i class="fas fa-exclamation-triangle"></i>
+                                                </span>
+                                                <span class="text-uppercase">Delete Product</span>
+                                            </a>
+                                        </div>
+                                    {% endif %}
                                 </div>
                             </div>
                         </div>
