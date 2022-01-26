@@ -79,9 +79,35 @@ def add_product(request):
             messages.error(request, 'Failed to add product.')
     else:
         form = ProductForm()
-        template = 'products/add_product.html'
-        context = {
-            'form': form,
+
+    template = 'products/add_product.html'
+    context = {
+        'form': form,
         }
 
     return render(request, template, context)
+
+def edit_product(request, product_id):
+    # Edit Product in the Store
+    product = get_object_or_404(Product, pk=product_id)
+    if request.method == 'POST':
+        form = ProductForm(request.POST, request.FILES, instance=product)
+        if form.is_valid():
+            form.save()
+            message.success(request, 'Product successfully updated')
+            return redirect(reverse('product_detail', args=[product.id]))
+        else:
+            messages.error(request, 'Failed to update product')
+    else:
+        form = ProductForm(instance=product)
+        messages.info(request, f'You are editing {product.name}')
+
+    template = 'products/edit_product.html'
+    context = {
+        'form': form,
+        'product': product
+        }
+
+    return render(request, template, context)
+
+
