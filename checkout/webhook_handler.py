@@ -2,37 +2,48 @@ from django.http import HttpResponse
 
 from .models import Order, OrderLineItem
 from products.models import Product
+from profiles.models import UserProfile
 
 import json
 import time
 
 
 class StripeWH_Handler:
-    """Handle Stripe webhooks"""
+    #Handle Stripe webhooks
 
     def __init__(self, request):
         self.request = request
 
     def handle_event(self, event):
-        """
-        Handle an unexpected-unknown webhook events
-        """
+        #Handle an unexpected-unknown webhook events
         return HttpResponse(
             content=f'Unhandled webhook received: {event["type"]}',
             status=200)
 
     def handle_payment_intent_succeeded(self, event):
-        """
-        Handle the payment_intent.suceeded webhook from Stripe
-        """
+        # Handle the payment_intent.suceeded webhook from Stripe
         intent = event.data.object
         pid = intent.id
         basket = intent.metadata.basket
-        save_info = intent.metadata.save-info
+        save_info = intent.metadata.save_info
 
         billing_details = intent.charges.data[0].billing_details
         grand_total = round(intent.charges.data[0].amount / 100, 2)
-        print(intent)
+
+        # Clean info in billing details
+        for field , value in billing_details.address.items():
+            if value == "":
+                billing_details = none
+        
+        # Update profile infomation if save_info is checked
+        profile = None
+        username = intent.metadata.username
+        if username != 'AnonymousUser':
+            profile = UserProfile.objects.get(user__username=username)
+            if save_info
+                profile.default_phone_number = billing_details.phone,
+                profile.save()
+
 
         order_exists = False
         attempt = 1
@@ -40,6 +51,7 @@ class StripeWH_Handler:
             try:
                 order = Order.objects.get(
                     full_name__iexact=billing_details.name,
+                    user_profile=profile
                     email__iexact=billing_details.email,
                     phone_number=billing_details.phone,
                     grand_total=grand_total,
