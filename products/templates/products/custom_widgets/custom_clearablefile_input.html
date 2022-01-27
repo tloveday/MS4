@@ -1,7 +1,7 @@
 <!-- Image input Widget taken from Django https://github.com/django/django/blob/main/django/forms/templates/django/forms/widgets/clearable_file_input.html  -->
 
 {% if widget.is_initial %}
-    <p>{{ widget.initial_text }}:</p>
+    <p>{{ widget.initial_text }}</p>
         <a href="{{ widget.value.url }}">
             <img width="100" height="100" class="rounded shadow-sm" src="{{ widget.value.url }}}">
         </a>
@@ -11,9 +11,10 @@
             <label class="custom-control-label blue" for="{{ widget.checkbox_id }}">{{ widget.clear_checkbox_label }}</label>
         </div>
     {% endif %}<br>
-    {{ widget.input_text }}:
+    {{ widget.input_text }}
 {% endif %}
-<span class="btn btn-outline-dark btn-yellow text-dark rounded-3 btn-file">
+<span class="btn btn-outline-dark btn-yellow text-dark rounded-3 btn-file mt-2 btn-lg">
     Select Image <input id="new-image" type="{{ widget.type }}" name="{{ widget.name }}"{% include "django/forms/widgets/attrs.html" %}>
 </span>
 <strong><p class="blue" id="filename"></p></strong>
+<hr>
