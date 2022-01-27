@@ -49,6 +49,11 @@ def checkout(request):
         form_data = {
             'full_name': request.POST['full_name'],
             'email': request.POST['email'],
+            'phone_number': request.POST['phone_number'],
+            'street_address1': request.POST['street_address1'],
+            'street_address2': request.POST['street_address2'],
+            'town_or_city': request.POST['town_or_city'],
+            'country': request.POST['country'],
         }
         order_form = OrderForm(form_data)
         # Save Valid order form
@@ -69,7 +74,7 @@ def checkout(request):
                         )
                         order_line_item.save()
                     else:
-                        for size, quantity in item_data['items_by-size'].items():
+                        for size, quantity in item_data['items_by_size'].items():
                             order_line_item = OrderLineItem(
                                 order=order,
                                 product=product,
@@ -94,6 +99,8 @@ def checkout(request):
             # If form is not valid
             messages.error(request, 'There was an error with your form. \
                 Please double check your information.')
+            print(order_form.errors)
+            return redirect(reverse('checkout'))
     else:
         # If there is nothing in basket
         basket = request.session.get('basket', {})
@@ -132,18 +139,18 @@ def checkout(request):
         else:
             order_form = OrderForm()
 
-    if not stripe_public_key:
-        messages.warning(
-            request, 'Stripe public key is missing - Did you set it')
+        if not stripe_public_key:
+            messages.warning(
+                request, 'Stripe public key is missing - Did you set it')
 
-    template = 'checkout/checkout.html'
-    context = {
-        'order_form': order_form,
-        'stripe_public_key': stripe_public_key,
-        'client_secret': intent.client_secret,
-    }
+        template = 'checkout/checkout.html'
+        context = {
+            'order_form': order_form,
+            'stripe_public_key': stripe_public_key,
+            'client_secret': intent.client_secret,
+        }
 
-    return render(request, template, context)
+        return render(request, template, context)
 
 
 def checkout_success(request, order_number):

@@ -21,7 +21,7 @@
                 <h2 class="title mb-4">Thank You</h2>
                 <hr>
                 <p>Your Order Information can be found below.</p>
-                <p>A Confirmation Email will be sent t <strong>{{ order.email }}</strong>.</p>
+                <p>A Confirmation Email will be sent to <strong>{{ order.email }}</strong>.</p>
             </div>
         </div>
         <!-- Order Information -->
@@ -165,7 +165,7 @@
                     {% if from_profile %}
                         <div class="row">
                             <div class="col">
-                                <a href="{% url 'profile %}" class="btn btn-outline-dark btn-red text-light mt-3 rounded-3">
+                                <a href="{% url 'profile' %}" class="btn btn-outline-dark btn-red text-light mt-3 rounded-3">
                                     <span class="icon">
                                         <i class="fas fa-arrow-left"></i>
                                     </span>
