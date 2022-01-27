@@ -11,10 +11,16 @@
 
 {% block content %}
 <hr>
-<h1 class="text-center">Welcome to Teifi Taekwondo</h1>
-<hr>
-<h3 class="text-center">Our Classes</h3>
+<!--How to implement Jumbotron in Bootsraps v 5https://stackoverflow.com/questions/63141494/how-to-create-jumbotron-in-bootstrap-5-->
 
+<div class="bg-transparent p-1 rounded-lg m-3">
+  <h1 class="display-4 text-center">Welcome to Teifi Taekwondo</h1>
+  <p class="lead text-center">Where Small Clicks lead to Massive kicks</p>
+</div>
+<hr>
+
+<h3 class="text-center">Our Classes</h3>
+<hr>
 <div class="row row-cols-1 row-cols-md-2 g-4">
     <div class="col">
       <div class="card h-100">
@@ -27,14 +33,36 @@
                 </div>
                 <div class="col-md-4">
                     <div class="card-body">
-                        <p class="class-info"> Aimed at our littlest ninjas (aged 4-6). Our Tiger Class teaches the basics of Taekwondo through a variety of games - They will not realise they are learning. However what they will realise is how fun it is.</p>
-                        <p>Training Time<span> Wednesday</span></p>
+                        <div class="row">
+                            <div class="col-6">
+                                <strong><span>Age:</span></strong>
+                            </div>
+                            <div class="col-6">
+                                <span>4-6 years</span>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-6">
+                                <strong><span>Training Days:</span></strong>
+                            </div>
+                            <div class="col-6">
+                                <span>Tuesday & Thursday</span>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-6">
+                                <strong><span>Time:</span></strong>
+                            </div>
+                            <div class="col-6">
+                                <span>5:00 - 6:00</span>
+                            </div>
+                        </div>
                     </div>
                 </div>
                 <div class="card-footer text-center">
-                    <a class="btn btn-primary" href="#" role="button">Classes</a>
-                    <a class="btn btn-primary" href="#" role="button">Learn</a>
-                    <a class="btn btn-primary" href="{% url 'products' %}?category=fees" role="button">Book A Session</a>
+                    <a class="btn btn-yellow" href="#" role="button">Classes</a>
+                    <a class="btn btn-yellow" href="#" role="button">Learn</a>
+                    <a class="btn btn-yellow" href="{% url 'products' %}?category=fees" role="button">Book A Session</a>
                 </div>
             </div>        
         </div>
@@ -49,15 +77,37 @@
                     <img src="/media/images/junior1.png" class="img-fluid img-class rounded-start" alt="Junior Students Training">
                   </div>
                   <div class="col-md-4">
-                      <div class="card-body">
-                          <p class="class-info"> EDIT THIS</p>
-                          <p>Training Time<span> Wednesday</span></p>
-                      </div>
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col-6">
+                                <strong><span>Age:</span></strong>
+                            </div>
+                            <div class="col-6">
+                                <span>6 - 12 years</span>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-6">
+                                <strong><span>Training Days:</span></strong>
+                            </div>
+                            <div class="col-6">
+                                <span>Tuesday & Thursday</span>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-6">
+                                <strong><span>Time:</span></strong>
+                            </div>
+                            <div class="col-6">
+                                <span>6:15 - 7:15</span>
+                            </div>
+                        </div>
+                    </div>
                   </div>
                   <div class="card-footer text-center">
-                      <a class="btn btn-primary" href="#" role="button">Classes</a>
-                      <a class="btn btn-primary" href="#" role="button">Learn</a>
-                      <a class="btn btn-primary" href="{% url 'products' %}?category=fees" role="button">Book A Session</a>
+                      <a class="btn btn-blue text-light" href="#" role="button">Classes</a>
+                      <a class="btn btn-blue text-light" href="#" role="button">Learn</a>
+                      <a class="btn btn-blue text-light" href="{% url 'products' %}?category=fees" role="button">Book A Session</a>
                   </div>
               </div>        
           </div>
@@ -72,15 +122,37 @@
                     <img src="/media/images/senior1.png" class="img-fluid img-class rounded-start" alt="Senior Students Training">
                   </div>
                   <div class="col-md-4">
-                      <div class="card-body">
-                          <p class="class-info"> EDIT ME</p>
-                          <p>Training Time<span> Wednesday</span></p>
-                      </div>
+                        <div class="card-body">
+                            <div class="row">
+                                <div class="col-6">
+                                    <strong><span>Age:</span></strong>
+                                </div>
+                                <div class="col-6">
+                                    <span>13+ years</span>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-6">
+                                    <strong><span>Training Days:</span></strong>
+                                </div>
+                                <div class="col-6">
+                                    <span>Tuesday & Thursday</span>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-6">
+                                    <strong><span>Time:</span></strong>
+                                </div>
+                                <div class="col-6">
+                                    <span>7:30 - 9:00</span>
+                                </div>
+                            </div>
+                        </div>
                   </div>
                   <div class="card-footer text-center">
-                      <a class="btn btn-primary" href="#" role="button">Classes</a>
-                      <a class="btn btn-primary" href="#" role="button">Learn</a>
-                      <a class="btn btn-primary" href="{% url 'products' %}?category=fees" role="button">Book A Session</a>
+                      <a class="btn btn-red text-light" href="#" role="button">Classes</a>
+                      <a class="btn btn-red text-light" href="#" role="button">Learn</a>
+                      <a class="btn btn-red text-light" href="{% url 'products' %}?category=fees" role="button">Book A Session</a>
                   </div>
               </div>        
           </div>
@@ -95,18 +167,91 @@
                     <img src="/media/images/ladies3.png" class="img-fluid img-class rounded-start" alt="Ladies Students Training">
                   </div>
                   <div class="col-md-4">
-                      <div class="card-body">
-                          <p class="class-info"> EDIT THIS</p>
-                          <p>Training Time<span> Wednesday</span></p>
-                      </div>
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col-6">
+                                <strong><span>Age:</span></strong>
+                            </div>
+                            <div class="col-6">
+                                <span>13+ years</span>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-6">
+                                <strong><span>Training Days:</span></strong>
+                            </div>
+                            <div class="col-6">
+                                <span>Monday & Wednesday</span>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-6">
+                                <strong><span>Time:</span></strong>
+                            </div>
+                            <div class="col-6">
+                                <span>7:00 - 8:00</span>
+                            </div>
+                        </div>
+                    </div>
                   </div>
                   <div class="card-footer text-center">
-                      <a class="btn btn-primary" href="#" role="button">Classes</a>
-                      <a class="btn btn-primary" href="#" role="button">Learn</a>
-                      <a class="btn btn-primary" href="{% url 'products' %}?category=fees" role="button">Book A Session</a>
+                      <a class="btn btn-pink" href="#" role="button">Classes</a>
+                      <a class="btn btn-pink" href="#" role="button">Learn</a>
+                      <a class="btn btn-pink" href="{% url 'products' %}?category=fees" role="button">Book A Session</a>
                   </div>
               </div>        
           </div>
       </div>
 </div>
+<hr>
+<h3 class="text-center">Contact Us</h3>
+<hr>
+<div class="col-12 col-md-8 offset-md-2 ">
+    <div class="card h-100">
+        <div class="row g-0">
+              <div class="col-md-6">
+                <img src="/media/images/map.png" class="img-fluid rounded-start" alt="Class Location">
+              </div>
+              <div class="col-md-4">
+                  <div class="card-body">
+                        <div class="row">
+                            <div class="col">
+                                <strong><span class="icon blue"><i class="fas fa-torii-gate"></i></span><span>Location:</span></strong>
+                            </div>
+                            <div class="col">
+                                <span>St Dogmaels Memorial Hall, St Dogmaels, SA43 RFF</span>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col">
+                                <strong><span class="icon blue"><i class="fas fa-mobile-alt"></i></span><span>Telephone Number:</span></strong>
+                            </div>
+                            <div class="col">
+                                <div class="row">
+                                    <div class="col"></span>Coach Laura:</div>
+                                    <div class="col">07091191144</div>
+                                </div>
+                                <div class="row">
+                                    <div class="col"></span>Coach Holly:</div>
+                                    <div class="col">07911123456</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col">
+                                <strong><span class="icon blue"><i class="fas fa-at"></i></span><span>Email:</span></strong>
+                            </div>
+                            <div class="col">
+                                <span>coach@teifitkd.com</span>
+                            </div>
+                        </div>
+                    </div>
+              </div>
+          </div>        
+      </div>
+  </div>
+</div>
+<hr>
+
+
 {% endblock %}
