@@ -74,7 +74,6 @@ def adjust_basket(request, item_id):
             messages.success(request, f'Removed {product.name} from the basket')
 
     request.session['basket'] = basket
-
     return redirect(reverse('view_basket'))
 
 
@@ -97,7 +96,6 @@ def remove_from_basket(request, item_id):
             messages.success(request, f'Removed {product.name} from the basket')
 
         request.session['basket'] = basket
-
         return HttpResponse(status=200)
 
     except Exception as e:
