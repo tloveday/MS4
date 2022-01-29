@@ -194,7 +194,7 @@ if 'USE_AWS' in os.environ:
     MEDIAFIILES_LOCATION = 'media'
     # Override static and media URLS in production
     STATIC_URL = f'https://{AWS_S3_CUSTOM_DOMAIN}/{STATICFILES_LOCATION}'
-    MEDIA_URL = f'https://{AWS_S3_CUSTOM_DOMAIN}/{MEDIAFIILES_LOCATION}'
+    MEDIA_URL = f'https://{AWS_S3_CUSTOM_DOMAIN}/{MEDIAFIILES_LOCATION}/'
 
 
 # Default primary key field type
