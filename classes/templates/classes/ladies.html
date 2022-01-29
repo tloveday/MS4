@@ -1,0 +1,114 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block page_header %}
+    <div class="container header-container">
+        <div class="row">
+            <div class="col"></div>
+        </div>
+    </div>
+{% endblock %}
+
+{% block content %}
+<hr>
+<div class="row">
+    <div class="col-8 offset-2">
+
+        <div class="card">
+            <div class="card-header bg-pink">
+              <h2 class="text-center">Ladies Taekwondo</h2>
+            </div>
+            <div class="card-body bg-transparent text-muted">
+                Class Information
+                <table class="table table-borderless text-center">
+                    <thead>
+                        <tr>
+                            <th scope="col">Monday &amp; Wednesday</th>
+                            <th scope="col">7:00pm - 8:00pm</th>
+                            <th scope="col">14+</th>
+                            <th scope="col"><i class=" pink icon fa-2x fas fa-female"> </i></th>
+                         </tr>
+                    </thead>
+                </table>
+            </div>
+            <div class="card-footer bg-transparent">
+                <div class="row">
+                    <p class="text-muted">Your Coaches</p>
+                </div>
+                <div class="row text-center">
+                    <div class="col">Laura</div>
+                    <div class="col">Holly</div>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<hr>
+<div class="row">
+    <div class=" col-12 col-md-8 offset-md-2">
+        <div class="card">
+            <div class="card-header bg-pink text-dark">
+              <h2 class="text-center">Frequently Asked Questions</h2>
+            </div>
+        </div>
+        <div class="card-body">
+            <div class="accordion accordion-flush" id="accordionFlushExample">
+                <div class="accordion-item">
+            <h2 class="accordion-header" id="flush-headingOne">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                 What Do I wear to training?
+                </button>
+            </h2>
+            <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
+                <div class="accordion-body">
+                    <p>Our classes take place in a matted Dojang. Takewondo is done with bare feet so there's no need to buy expensive trainers. We suggest that all new starters wear loose fitting clothing (without zips or buttons) until you have obtained your Dobok (provided with your membership).</p>
+                    <p>Additional items can be purchased from the shop.  We also suggest that students come with a bottle of water and a if preferred a towel.</p>
+                
+                </div>
+            </div>
+                </div>
+                <div class="accordion-item">
+            <h2 class="accordion-header" id="flush-headingTwo">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+                 Do I need a licence and insurance?
+                </button>
+            </h2>
+            <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushExample">
+                <div class="accordion-body">
+                     All students require a licence and insurance. We have placed these in the annual membership to Teifi Taekwondo.
+                </div>
+            </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="flush-headingFour">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseFour" aria-expanded="false" aria-controls="flush-collapseFour">
+                            Do I need sparring equipment? What equipment do I need?
+                        </button>
+                    </h2>
+                    <div id="flush-collapseFour" class="accordion-collapse collapse" aria-labelledby="flush-headingFour" data-bs-parent="#accordionFlushExample">
+                        <div class="accordion-body">
+                            <p>Sparring equipment can be purchased at any point in during your training journey, however All students will need sparring equipment when they are promoted to Green Belt Blue Stripe.</p>
+                            <p>Your sparring equipment consists of head guard, hand pads, feet pads, shin pads, gum shield, and either a groin guard (Boys &amp; Men) or breast protectors (ladies). Due to the volume of equipment a bag to hold them in is suggested.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="flush-headingFive">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseFive" aria-expanded="false" aria-controls="flush-collapseFive">
+                            Do I have to grade for belts?
+                        </button>
+                    </h2>
+                    <div id="flush-collapseFive" class="accordion-collapse collapse" aria-labelledby="flush-headingFive" data-bs-parent="#accordionFlushExample">
+                        <div class="accordion-body">
+                            <p>Grading for belts is purely optional. The belt system sets goals for students and encourages them to learn new things and face fresh challenges. However, if a student does not wish to grade, we will still be happy for them to train with us.</p>
+                            <p>There are 4 coloured belt gradings a year. Every March, June, September and December.</p>
+                            <p>There are 2 black belt gradings a year. Every April and October</p>
+                        </div>
+                    </div>
+                </div>         
+             </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
