@@ -14,119 +14,50 @@
 <!--How to implement Jumbotron in Bootsraps v 5https://stackoverflow.com/questions/63141494/how-to-create-jumbotron-in-bootstrap-5-->
 
 <div class="bg-transparent p-1 rounded-lg m-3">
-  <h1 class="display-4 text-center">Welcome to Teifi Taekwondo</h1>
-  <p class="lead text-center">Where Small Clicks lead to Massive kicks</p>
+  <h1 class="display-4 text-center"><strong>Welcome to Teifi Taekwondo</strong></h1>
+  <div class="row">
+    <h3 class="text-center blue">Why Join Teifi Taekwondo?</h3>
+    <div class="col-md-6">
+        <h5 class="red text-center">Improve Fitness</h5>
+        <hr>
+        <p>Boost your stamina, get stronger, lose fat and improve your flexibility, all whilst learning a martial art.</p>
+        <h5 class="blue text-center">Build Confidence</h5>
+        <hr>
+        <p>Break out of your shell with our warm and supportive community</p>
+    </div>
+    <div class="col-md-6">
+        <h5 class="blue text-center">Relieve Stress</h5>
+        <hr>
+        <p>Training helps your body release a chemical called endorphins which not only helps provides you with “feel good” emotions.</p>
+        <h5 class="red text-center">Develop Discipline</h5>
+        <hr>
+        <p>Become focused, patient and poite</p>
+    </div>
+</div>
 </div>
 <hr>
 
 <h3 class="text-center">Our Classes</h3>
 <hr>
-<div class="row row-cols-1 row-cols-md-2 g-4">
-    <div class="col">
-      <div class="card h-100">
-          <div class="row g-0">
-                <div class="card-header text-center bg-yellow">
-                    <h5 class="card-title text-dark class-title">Tigers</h5>
-                </div>
-                <div class="col-md-6">
-                  <img src="{{ MEDIA_URL }}images/tiger1.png" class="img-fluid rounded-start" alt="Tigers Students Training">
-                </div>
-                <div class="col-md-4">
-                    <div class="card-body">
-                        <div class="row">
-                            <div class="col-6">
-                                <strong><span>Age:</span></strong>
-                            </div>
-                            <div class="col-6">
-                                <span>4-6 years</span>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-6">
-                                <strong><span>Training Days:</span></strong>
-                            </div>
-                            <div class="col-6">
-                                <span>Tuesday & Thursday</span>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-6">
-                                <strong><span>Time:</span></strong>
-                            </div>
-                            <div class="col-6">
-                                <span>5:00 - 6:00</span>
-                            </div>
-                        </div>
+<div class="col-12 col-md-10 offset-md-1">
+    <div class="row row-cols-1 row-cols-md-2 g-4">
+        <div class="col">
+          <div class="card h-100">
+              <div class="row g-0">
+                    <div class="card-header text-center bg-yellow">
+                        <h5 class="card-title text-dark class-title">Tigers</h5>
                     </div>
-                </div>
-                <div class="card-footer text-center">
-                    <a class="btn btn-yellow" href="{% url 'tigers' %}" role="button">Classes</a>
-                    <a class="btn btn-yellow" href="{% url 'products' %}?category=fees" role="button">Book A Session</a>
-                </div>
-            </div>        
-        </div>
-    </div>
-    <div class="col">
-        <div class="card h-100">
-            <div class="row g-0">
-                  <div class="card-header text-center bg-blue">
-                      <h5 class="card-title text-light class-title">Juniors</h5>
-                  </div>
-                  <div class="col-md-6">
-                    <img src="{{ MEDIA_URL }}images/junior1.png" class="img-fluid img-class rounded-start" alt="Junior Students Training">
-                  </div>
-                  <div class="col-md-4">
-                    <div class="card-body">
-                        <div class="row">
-                            <div class="col-6">
-                                <strong><span>Age:</span></strong>
-                            </div>
-                            <div class="col-6">
-                                <span>6 - 13 years</span>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-6">
-                                <strong><span>Training Days:</span></strong>
-                            </div>
-                            <div class="col-6">
-                                <span>Tuesday & Thursday</span>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-6">
-                                <strong><span>Time:</span></strong>
-                            </div>
-                            <div class="col-6">
-                                <span>6:15 - 7:15</span>
-                            </div>
-                        </div>
+                    <div class="col-md-6">
+                      <img src="{{ MEDIA_URL }}images/tiger1.png" class="img-fluid rounded-start" alt="Tigers Students Training">
                     </div>
-                  </div>
-                  <div class="card-footer text-center">
-                      <a class="btn btn-blue text-light" href="{% url 'juniors' %}" role="button">Classes</a>
-                      <a class="btn btn-blue text-light" href="{% url 'products' %}?category=fees" role="button">Book A Session</a>
-                  </div>
-              </div>        
-          </div>
-      </div>
-    <div class="col">
-        <div class="card h-100">
-            <div class="row g-0">
-                  <div class="card-header text-center bg-red">
-                      <h5 class="card-title text-white class-title">Seniors</h5>
-                  </div>
-                  <div class="col-md-6">
-                    <img src="{{ MEDIA_URL }}images/senior1.png" class="img-fluid img-class rounded-start" alt="Senior Students Training">
-                  </div>
-                  <div class="col-md-4">
+                    <div class="col-md-4">
                         <div class="card-body">
                             <div class="row">
                                 <div class="col-6">
                                     <strong><span>Age:</span></strong>
                                 </div>
                                 <div class="col-6">
-                                    <span>14+ years</span>
+                                    <span>4-6 years</span>
                                 </div>
                             </div>
                             <div class="row">
@@ -142,62 +73,151 @@
                                     <strong><span>Time:</span></strong>
                                 </div>
                                 <div class="col-6">
-                                    <span>7:30 - 9:00</span>
+                                    <span>5:00 - 6:00</span>
                                 </div>
                             </div>
                         </div>
-                  </div>
-                  <div class="card-footer text-center">
-                      <a class="btn btn-red text-light" href="{% url 'seniors' %}" role="button">Classes</a>
-                      <a class="btn btn-red text-light" href="{% url 'products' %}?category=fees" role="button">Book A Session</a>
-                  </div>
-              </div>        
-          </div>
-      </div>
-    <div class="col">
-        <div class="card h-100">
-            <div class="row g-0">
-                  <div class="card-header text-center bg-pink">
-                      <h5 class="card-title text-dark class-title">Ladies</h5>
-                  </div>
-                  <div class="col-md-6">
-                    <img src="{{ MEDIA_URL }}images/ladies3.png" class="img-fluid img-class rounded-start" alt="Ladies Students Training">
-                  </div>
-                  <div class="col-md-4">
-                    <div class="card-body">
-                        <div class="row">
-                            <div class="col-6">
-                                <strong><span>Age:</span></strong>
-                            </div>
-                            <div class="col-6">
-                                <span>14+ years</span>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-6">
-                                <strong><span>Training Days:</span></strong>
-                            </div>
-                            <div class="col-6">
-                                <span>Monday & Wednesday</span>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-6">
-                                <strong><span>Time:</span></strong>
-                            </div>
-                            <div class="col-6">
-                                <span>7:00 - 8:30</span>
-                            </div>
-                        </div>
                     </div>
-                  </div>
-                  <div class="card-footer text-center">
-                      <a class="btn btn-pink" href="{% url 'ladies' %}" role="button">Classes</a>
-                      <a class="btn btn-pink" href="{% url 'products' %}?category=fees" role="button">Book A Session</a>
-                  </div>
-              </div>        
+                    <div class="card-footer text-center">
+                        <a class="btn btn-yellow" href="{% url 'tigers' %}" role="button">Classes</a>
+                        <a class="btn btn-yellow" href="{% url 'products' %}?category=fees" role="button">Book A Session</a>
+                    </div>
+                </div>        
+            </div>
+        </div>
+        <div class="col">
+            <div class="card h-100">
+                <div class="row g-0">
+                      <div class="card-header text-center bg-blue">
+                          <h5 class="card-title text-light class-title">Juniors</h5>
+                      </div>
+                      <div class="col-md-6">
+                        <img src="{{ MEDIA_URL }}images/junior1.png" class="img-fluid img-class rounded-start" alt="Junior Students Training">
+                      </div>
+                      <div class="col-md-4">
+                        <div class="card-body">
+                            <div class="row">
+                                <div class="col-6">
+                                    <strong><span>Age:</span></strong>
+                                </div>
+                                <div class="col-6">
+                                    <span>6 - 13 years</span>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-6">
+                                    <strong><span>Training Days:</span></strong>
+                                </div>
+                                <div class="col-6">
+                                    <span>Tuesday & Thursday</span>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-6">
+                                    <strong><span>Time:</span></strong>
+                                </div>
+                                <div class="col-6">
+                                    <span>6:15 - 7:15</span>
+                                </div>
+                            </div>
+                        </div>
+                      </div>
+                      <div class="card-footer text-center">
+                          <a class="btn btn-blue text-light" href="{% url 'juniors' %}" role="button">Classes</a>
+                          <a class="btn btn-blue text-light" href="{% url 'products' %}?category=fees" role="button">Book A Session</a>
+                      </div>
+                  </div>        
+              </div>
           </div>
-      </div>
+        <div class="col">
+            <div class="card h-100">
+                <div class="row g-0">
+                      <div class="card-header text-center bg-red">
+                          <h5 class="card-title text-white class-title">Seniors</h5>
+                      </div>
+                      <div class="col-md-6">
+                        <img src="{{ MEDIA_URL }}images/senior1.png" class="img-fluid img-class rounded-start" alt="Senior Students Training">
+                      </div>
+                      <div class="col-md-4">
+                            <div class="card-body">
+                                <div class="row">
+                                    <div class="col-6">
+                                        <strong><span>Age:</span></strong>
+                                    </div>
+                                    <div class="col-6">
+                                        <span>14+ years</span>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-6">
+                                        <strong><span>Training Days:</span></strong>
+                                    </div>
+                                    <div class="col-6">
+                                        <span>Tuesday & Thursday</span>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-6">
+                                        <strong><span>Time:</span></strong>
+                                    </div>
+                                    <div class="col-6">
+                                        <span>7:30 - 9:00</span>
+                                    </div>
+                                </div>
+                            </div>
+                      </div>
+                      <div class="card-footer text-center">
+                          <a class="btn btn-red text-light" href="{% url 'seniors' %}" role="button">Classes</a>
+                          <a class="btn btn-red text-light" href="{% url 'products' %}?category=fees" role="button">Book A Session</a>
+                      </div>
+                  </div>        
+              </div>
+          </div>
+        <div class="col">
+            <div class="card h-100">
+                <div class="row g-0">
+                      <div class="card-header text-center bg-pink">
+                          <h5 class="card-title text-dark class-title">Ladies</h5>
+                      </div>
+                      <div class="col-md-6">
+                        <img src="{{ MEDIA_URL }}images/ladies3.png" class="img-fluid img-class rounded-start" alt="Ladies Students Training">
+                      </div>
+                      <div class="col-md-4">
+                        <div class="card-body">
+                            <div class="row">
+                                <div class="col-6">
+                                    <strong><span>Age:</span></strong>
+                                </div>
+                                <div class="col-6">
+                                    <span>14+ years</span>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-6">
+                                    <strong><span>Training Days:</span></strong>
+                                </div>
+                                <div class="col-6">
+                                    <span>Monday & Wednesday</span>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-6">
+                                    <strong><span>Time:</span></strong>
+                                </div>
+                                <div class="col-6">
+                                    <span>7:00 - 8:30</span>
+                                </div>
+                            </div>
+                        </div>
+                      </div>
+                      <div class="card-footer text-center">
+                          <a class="btn btn-pink text-light" href="{% url 'ladies' %}" role="button">Classes</a>
+                          <a class="btn btn-pink text-light" href="{% url 'products' %}?category=fees" role="button">Book A Session</a>
+                      </div>
+                  </div>        
+              </div>
+          </div>
+    </div>
 </div>
 <hr>
 <h3 class="text-center">Contact Us</h3>
@@ -250,6 +270,65 @@
           </div>        
       </div>
   </div>
+</div>
+<hr>
+<h3 class="text-center">What Our Students Say</h3>
+<div class="row">
+    <div class="col-12 col-md-10 offset-md-1">
+        <div class="row row-cols-1 row-cols-md-3 g-4">
+            <div class="col">
+                <div class="card mb-3">
+                    <div class="row g-0">
+                      <div class="col-md-4">
+                        <img src="{{ MEDIA_URL }}images/adam.png" class="img-fluid rounded-circle img-thumbnail" alt="...">
+                      </div>
+                      <div class="col-md-8">
+                        <div class="card-body">
+                            <p>Laura, Holly and the team have given my daughter so much confidence since starting our silent ninja is a respectful warrior, wanting to practice constanlty between classes.</p>
+                            <figcaption class="blockquote-footer">
+                                 <cite title="Source Title blue">Scott Summers</cite>
+                            </figcaption>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+            </div>
+            <div class="col">
+                <div class="card mb-3">
+                    <div class="row g-0">
+                      <div class="col-md-4">
+                        <img src="{{ MEDIA_URL }}images/student.png" class="img-fluid img-thumbnail rounded-circle" alt="...">
+                      </div>
+                      <div class="col-md-8">
+                        <div class="card-body">
+                            <p >After pitching in whilst watching my children, I was encouraged to step into the ladies class. I’m loving it, quickly catching the kids up and have enough confidence to join the senior class.</p>
+                            <figcaption class="blockquote-footer">
+                                 <cite title="Source Title blue">Susan Storm</cite>
+                            </figcaption>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+            </div>
+            <div class="col">
+                <div class="card mb-3">
+                    <div class="row g-0">
+                      <div class="col-md-4">
+                        <img src="{{ MEDIA_URL }}images/emma.png" class="img-fluid rounded-circle border border-3 border-blue" alt="...">
+                      </div>
+                      <div class="col-md-8">
+                        <div class="card-body">
+                            <p>The focus on fun in these sessions is perfect. The skills and techniques are flooding in and my son doesn’t notice he’s learning, and I've now decided to join in myself.</p>
+                            <figcaption class="blockquote-footer">
+                                 <cite title="Source Title blue">Jean Grey</cite>
+                            </figcaption>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+            </div>
+        </div>
+    </div>
 </div>
 <hr>
 

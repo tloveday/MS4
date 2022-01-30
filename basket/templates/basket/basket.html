@@ -91,12 +91,12 @@
                             </tr>
                             {% endfor %}
                             <tr>
-                                <td colspan="5" class="text-right">
-                                    <h4 class="mt-4"><strong>Grand Total: £{{ grand_total|floatformat:2 }}</strong></h4>
+                                <td colspan="5">
+                                    <h4 class="mt-4 float-end"><strong>Grand Total: £{{ grand_total|floatformat:2 }}</strong></h4>
                                 </td>
                             </tr>
                             <tr>
-                                <td colspan="5" class="text-right">
+                                <td colspan="5">
                                     <a href="{% url 'products' %}" class="btn btn-outline-dark btn-red text-light rounded-3 btn-lg">
                                         <span class="icon">
                                             <i class="fas fa-arrow-left"></i>

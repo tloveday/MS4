@@ -15,7 +15,6 @@ body{
 .bg-red{
     background: #f3101f !important;
 }
-
 .blue{
     color: #0063a1 !important;
 }
@@ -23,6 +22,9 @@ body{
     background: #0063a1 !important;
 }
 .text-blue{
+    color: #0063a1 !important;
+}
+.border-blue{
     color: #0063a1 !important;
 }
 .yellow{
@@ -221,5 +223,38 @@ input[name='q']::placeholder{
 @media (min-width: 992px){
     .header-container {
         padding-top: 164px;
+    }
+}
+
+/* Mobile View adjustments */
+@media (max-width: 991px) {
+    .header-container {
+        padding-top: 70px;
+    }
+
+    .nav-link {
+        padding: 0.15rem;
+    }
+
+    .nav-link i.fa-lg {
+        font-size: 0.65rem;
+    }
+
+     .navbar-toggler {
+        padding: .6rem .6rem;
+        font-size: 0.9rem;
+    }
+
+    .btn .rounded-3 {
+        padding: .300rem .300rem;
+    }
+
+    .btn-lg .rounded-3 {
+        padding: .300rem .300rem;
+        font-size: .50rem;
+    }
+
+    .increment-qty, .decrement-qty {
+        padding: .25rem .5rem !important;
     }
 }

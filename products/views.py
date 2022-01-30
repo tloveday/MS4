@@ -9,7 +9,7 @@ from .forms import ProductForm
 
 
 def all_products(request):
-    # View to Show All products, including sorting and search quries 
+    # View to Show All products, including sorting and search quiries
 
     products = Product.objects.all()
     query = None
@@ -75,7 +75,7 @@ def add_product(request):
     if not request.user.is_superuser:
         messages.error(request, 'Sorry you are not able to access that')
         return redirect(reverse('products'))
-    
+
     if request.method == 'POST':
         form = ProductForm(request.POST, request.FILES)
         if form.is_valid():
@@ -136,5 +136,3 @@ def delete_product(request, product_id):
     messages.success(request, 'Product Deleted')
 
     return redirect(reverse('products'))
-
-
