@@ -229,7 +229,7 @@ input[name='q']::placeholder{
 /* Mobile View adjustments */
 @media (max-width: 991px) {
     .header-container {
-        padding-top: 70px;
+        padding-top: 80px;
     }
 
     .nav-link {
@@ -257,4 +257,5 @@ input[name='q']::placeholder{
     .increment-qty, .decrement-qty {
         padding: .25rem .5rem !important;
     }
+    
 }
