@@ -15,8 +15,8 @@
 {% if request.user.is_superuser %}
 <div class="row">
     <div class="col-12 sm-2 offset-sm-5">
-        <a href="{% url 'add_product' %}" class="btn btn-red m-2">Edit Post</a>
-        <a href="{% url 'add_product' %}" class="btn btn-red m-2">Delete Post</a>
+        <a href="{% url 'add_product' %}" class="btn btn-blue text-light m-2">Edit Post</a>
+        <a href="{% url 'add_product' %}" class="btn btn-red text-light m-2">Delete Post</a>
     </div>
 </div>
 {% endif %}
@@ -28,5 +28,5 @@
 
 
 </div>
-
+<a href="{% url 'blog' %}" class="btn btn-red text-light m-2">Back</a>
 {% endblock %}

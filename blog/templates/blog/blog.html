@@ -15,13 +15,11 @@
 {% if request.user.is_superuser %}
 <div class="row">
     <div class="col-12 sm-2 offset-sm-6">
-        <a href="{% url 'add_product' %}" class="btn btn-red m-2">Add Blog Post</a>
+        <a href="{% url 'add_post' %}" class="btn btn-red text-light m-2">Add Blog Post</a>
     </div>
 </div>
 {% endif %}
 <hr>
-
-
 
 {% for post in object_list %}
     <div class="row">
@@ -43,8 +41,8 @@
                         </div>
                         {% if request.user.is_superuser %}
                             <div class="card-footer">
-                                <a href="{% url 'add_product' %}" class="btn btn-yellow float-end m-1">Edit Post</a>
-                                <a href="{% url 'add_product' %}" class="btn btn-red float-end m-1">Delete</a>
+                                <a href="{% url 'add_product' %}" class="btn btn-blue text-light float-end m-1">Edit Post</a>
+                                <a href="{% url 'add_product' %}" class="btn btn-red text-light float-end m-1">Delete</a>
                         {% endif %}
                             </div>
                         </div>
@@ -59,8 +57,8 @@
                         </div>
                         {% if request.user.is_superuser %}
                             <div class="card-footer">
-                                <a href="{% url 'add_product' %}" class="btn btn-yellow float-end m-1">Edit Post</a>
-                                <a href="{% url 'add_product' %}" class="btn btn-red float-end m-1">Delete</a>
+                                <a href="{% url 'add_product' %}" class="btn btn-blue text-light float-end m-1">Edit Post</a>
+                                <a href="{% url 'add_product' %}" class="btn btn-red text-light float-end m-1">Delete</a>
                             </div>
                         {% endif %}
                 {% endif %}

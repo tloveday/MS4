@@ -1,11 +1,7 @@
 from django.shortcuts import render
-from django.views.generic import ListView, DetailView
+from django.views.generic import ListView, DetailView, CreateView
 from .models import Post
 
-
-# def blog(request):
-""" View that brings the blog list page """
-# return render(request, 'blog/blog.html', {})
 
 class BlogView(ListView):
     model = Post
@@ -15,3 +11,10 @@ class BlogView(ListView):
 class PostView(DetailView):
     model = Post
     template_name = 'blog/post.html'
+
+
+class AddPost(CreateView):
+    model = Post
+    template_name = 'blog/add_post.html'
+    fields = '__all__'
+    
