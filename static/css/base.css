@@ -188,7 +188,7 @@ input[name='q']::placeholder{
 }
 
 /* - Image Widget - */
-.btn.file{
+.btn-file{
     position: relative;
     overflow: hidden;
 }
