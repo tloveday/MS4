@@ -1,1 +1,69 @@
-Hello there.
+{% extends "base.html" %}
+{% load static %}
+
+{% block page_header %}
+    <div class="container header-container">
+        <div class="row">
+            <div class="col"></div>
+        </div>
+    </div>
+{% endblock %}
+{% block content %}
+<hr>
+<h2 class="text-center">Our Blog</h2>
+{% if request.user.is_superuser %}
+<div class="row">
+    <div class="col-12 sm-2 offset-sm-6">
+        <a href="{% url 'add_post' %}" class="btn btn-red m-2">Add Blog Post</a>
+    </div>
+</div>
+{% endif %}
+<hr>
+
+{% for post in posts %}
+    <div class="row">
+        <div class="col-12 col-md-8 offset-md-2">
+            <div class="card mb-3">
+                {% if post.image %}
+                    <div class="row g-0">
+                        <div class="card-header text-center">
+                            <h5 class="card-title"><a href="{% url 'post' post.id %}"></a></h5>
+                            <p class="card-text"><small class="text-muted float-end">{{post.author.first_name}}</small></p>
+                        </div>
+                        <div class="col-md-4">
+                            <img src="..." class="img-fluid rounded-start" alt="...">
+                        </div>
+                        <div class="col-md-8">
+                            <div class="card-body">
+                            <p class="card-text">{{post.body}}</p>
+                            </div>
+                        </div>
+                        {% if request.user.is_superuser %}
+                            <div class="card-footer">
+                                <a href="{% url 'add_post' %}" class="btn btn-yellow float-end m-1">Edit Post</a>
+                                <a href="{% url 'add_product' %}" class="btn btn-red float-end m-1">Delete</a>
+                        {% endif %}
+                            </div>
+                        </div>
+                    </div>
+                {% else %}
+                        <div class="card-header">
+                            <h5 class="card-title "><a class="text-reset text-decoration-none" href="{% url 'post' post.id %}">{{post.title}}</a></h5>
+                            <p class="card-subtitle"><small class="text-muted float-end">{{post.author.first_name}}</small></p>
+                        </div>
+                        <div class="card-body">
+                            <p class="card-text">{{post.body}}</p>
+                        </div>
+                        {% if request.user.is_superuser %}
+                            <div class="card-footer">
+                                <a href="{% url 'add_post' %}" class="btn btn-yellow float-end m-1">Edit Post</a>
+                                <a href="{% url 'add_product' %}" class="btn btn-red float-end m-1">Delete</a>
+                            </div>
+                        {% endif %}
+                {% endif %}
+            </div>
+        </div>
+    </div>
+{% endfor %}
+
+{% endblock %} 
