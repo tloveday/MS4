@@ -41,6 +41,8 @@ def add_post(request):
     if request.method == 'POST':
         post_form = PostForm(request.POST, request.FILES)
         if post_form.is_valid():
+            post = post_form.save(commit=False)
+            post.author = request.user
             post = post_form.save()
             messages.success(request, 'Blog post successfully published')
             return redirect(reverse('post', args=[post.id]))
