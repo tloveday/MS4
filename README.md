@@ -31,6 +31,10 @@
       - [Features on the Checkout Page -](#features-on-the-checkout-page--)
       - [Features on the Thankyou Page -](#features-on-the-thankyou-page--)
       - [Features on the Classes Page -](#features-on-the-classes-page--)
+      - [Features on the Blog Page -](#features-on-the-blog-page--)
+      - [Features on the Post Page -](#features-on-the-post-page--)
+      - [Features on the Blog Management - Add a Post - Page -](#features-on-the-blog-management---add-a-post---page--)
+      - [Features on the Blog Management - Edit Post - Page - -](#features-on-the-blog-management---edit-a-post---page--)
     + [Features left to Implement -](#features-left-to-implement--)
     + [Bugs and Fixes Implemented after Testing -](#bugs-and-fixes-implemented-after-testing--)
   * [Technologies Used](#technologies-used)
@@ -388,6 +392,60 @@ These fields are for a reference only can't be adjusted by the user.
 
 - _Links_ - At the end of the class information are several links which direct the user to the Fees category in the shop.
 
+#### Features on the Blog Page - 
+
+- _Page Title_ - A reminder to users that they're on the blog page.
+
+- _Post_ - A list of blog posts ordered by reverse ID in an uncluttered, clean layout; Complete with image, author alogside a snippet of the blog post's content. The header will contain a link taking users to the post's page.
+
+- _Edit/Delete/Add links_ - *Superusers Only* Superusers will also have access to the Edit/Delete/Add links allowing them to delete posts and directing them to the relevant Add post page for creation of posts or the Edit page for editing purposes.
+
+#### Features on the Post Page - 
+
+- _Post Image_ - An image relevnt to the post the information is referencing. 
+
+- _Product Title_ - The name of the product.
+
+- _Author_ - The authr of the post. 
+
+
+- _Body_ - The content of the post
+
+
+- _Edit/Delete Buttons_ - *Superusers Only* Allows changes to be made to the products via the Edit Post page. Clicking delete will remove that post
+
+
+#### Features on the Product Management - Add a Post - Page -
+
+- _Blog Management Header and Add Post Subheading_ - Reference for super users. The subheading is there to reassure them they're on the right page regarding posting blogs.  
+
+- _Form Fields_ - The form fields have explicit instructions and form validation that notifies users when the form has been filled out incorrectly. This ensures the form isn't submitted without the required information.
+Users should type the required information straight into the form fields.
+
+
+- _Post Title_ - This is the name of the product you want to add. 
+
+- _Post Body_ - Add the content of the blog. This has been set up so html can be used within to format the blog post.
+
+- _Cancel Button_ - Directs users back to the All blog page.
+
+- _Add Post Button_ - Adds the new post to the database. The new post will be visible on the blogs page. 
+
+#### Features on the Product Management - Edit Product - Page -
+
+- _Edit Product Form_ - Clicking the Edit link next to a product will direct the user to that items Edit page. This form contains the exact same form fields as the Add Post form and will be auto-filled with the current information relating to that post.
+To update this information just enter the new information into the correct field and click the Edit Post button. The cancel button will return users to the blog page.
+
+- _Form Fields_ - The form fields have explicit instructions and form validation that notifies users when the form has been filled out incorrectly. This ensures the form isn't submitted without the required information.
+
+- _Post Title_ - This is the name of the product you want to add. 
+
+- _Post Body_ - Add the content of the blog. This has been set up so html can be used within to format the blog post.
+
+- _Cancel Button_ - Directs users back to the All blog page.
+
+- _Edit Post Button_ - Adds the updated information to the database. The edited post will be visible on the blogs page. 
+ 
 
 ### Features left to Implement -
 
@@ -409,13 +467,16 @@ These fields are for a reference only can't be adjusted by the user.
 
 - _Student Tracking System_ - Majority of younger students won’t have access to a card that will allow them to make purchases, with the vast majority of users therefore being their parents (or guardians) by adding notes style text fields into the checkout for details such as student names for session fees, memberships and gradings, with grading information going further to include the current belt of the students. This could further be added to the profile with a place being kept to store student names and belt ranks in situations like this.
 
-- _Learn Pages_ - For some potential users they may want further detail on the learning which occurs in the club with syllabus, belt order etc.  
+- _Learn Pages_ - For some potential users they may want further detail on the learning which occurs in the club with syllabus, belt order etc.
 
+- _Categories In Blogs_ Add ways for users to see specific categories for the blog so that those looking for information regarding Gradings aren't surrounded out by posts concerning general club admin or competitions.
+
+- _Comments In Blogs_ With the Addition of the blog the addition of a comment section would create opportunities for users and admin to relate information back and forth- ForExample in the blog there is a post dedicated to getting information surrounding intreset for an "In-House Competition" The post asks for users to discuss this with instructors- by having the comment section this would enable users who are interested to provide immediate feed back. Additionally with Good luck and Congratulation posts regarding gradings and competitions it would be an opportunity fo users to support fellow members of as they test and compete, fostering a greater sense of community within the club.
+
+- _Likes In Blogs_ This would enable owners to see imediate response from users on their posts. It could be used as a straw poll when the club raises questions.
 
 ### Bugs and Fixes Implemented after Testing -
-
-
-
+- Following feedback an error and typo in CSS meant that the image picker used in editing and creating products overflew and preventing the use of the form.  
 
 ## Technologies Used
 
@@ -786,6 +847,8 @@ Images containing the Clubs Logo:
 - [Code-Institute](https://codeinstitute.net/)
 I had a lot of trouble with the checkout and webhook handler so used those CI videos in particular, to help overcome the difficulties.
 
+- [Codemy.com](https://www.youtube.com/c/Codemycom)
+I used the videos from the [youtube playlist](https://www.youtube.com/playlist?list=PLCC34OHNcOtr025c1kHSPrnP18YPB-NFi) on creaitng a blog to build the blog that features on the website.
 
 4. Icons and Buttons 
 
@@ -809,6 +872,7 @@ pdf files, etc. were of great help, as was the advice and motivation given by th
 
 ### Final Thoughts - 
 This project was a labour of love, particularly as I chose to use my initial learning as its springboard. I wanted to show myself how much I had learned by re-packaging the topic of my first milestone project into my final. Unfortunately, the project was started in a season of both uncertainty and festivities and with a young family and the threat and executions of school lockdowns and home/remote learning became a secondary to everything. I have sat through hours of youtube tutorials, slack channels, stack questions on top of multiple re-watches of the entire modules leading into the project. I have however learnt from mistakes made in previous projects, spending significantly less time looking at singular problems in isolation, researching and then turning to guidance from my sources available including but not limited to, my Hackathon team and mentor.  Whilst this may not be perfect or as I originally wanted and intended but it is the best that I can currently provide with my limited experience. The deployed and submitted project alongside the completion of the course at Code institute is a personal triumph for myself and the last 12 months starting the course in a Carpark awaiting the birth of my daughter, house move and the continual uncertainty of Covid-19 has made me realise I am capable, I can deliver - it might take me a little longer on occasion- but I can get it done. As WarwickZero, Vehlr and their twitch communities have continually reminded me… “You got this Pan” (Pan being part of the username CaptainPan I go by.)
+
 
 ## Disclaimer
 
