@@ -1,4 +1,4 @@
-# Create your views here.
+# Inspired by Codemy.com youtube video asoutlined in Read.ME and Boutique Ado.
 from django.shortcuts import (
     render,
     redirect,

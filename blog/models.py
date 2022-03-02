@@ -1,4 +1,4 @@
-# Following Codemy.com django blog tutorial from youtube,
+# Following Codemy.com django blog tutorial from youtube as outlined in Read.ME,
 # blending it with bouique ado structre.
 
 from django.db import models
