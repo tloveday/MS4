@@ -14,7 +14,12 @@
 {% if request.user.is_superuser %}
 <div class="row">
     <div class="col-12 sm-2 offset-sm-6">
-        <a href="{% url 'add_post' %}" class="btn btn-blue text-light m-2">Add Blog Post</a>
+        <a href="{% url 'add_post' %}" class="btn btn-blue text-light m-2">
+            <span class="">Add Blog Post</span>
+            <span class="icon">
+                <i class="far fa-plus-square"></i>
+            </span>
+        </a>
     </div>
 </div>
 {% endif %}
@@ -28,20 +33,30 @@
                     <div class="row g-0">
                         <div class="card-header text-center">
                             <h5 class="card-title"><a href="{% url 'post' post.id %}"></a></h5>
-                            <p class="card-text"><small class="text-muted float-end">{{post.author.first_name}}</small></p>
+                            <p class="card-subtitle"><small class="text-muted float-start">Posted by: {{post.author.first_name}}</small></p>
                         </div>
                         <div class="col-md-4">
                             <img src="..." class="img-fluid rounded-start" alt="...">
                         </div>
                         <div class="col-md-8">
                             <div class="card-body">
-                            <p class="card-text">{{post.body|slice:":140"|safe}}</p>
+                            <p class="card-text">{{post.body|slice:":300"|safe}}...</p>
                             </div>
                         </div>
                         {% if request.user.is_superuser %}
                             <div class="card-footer">
-                                <a href="{% url 'edit_post' post.id %}" class="btn btn-yellow float-end m-1">Edit Post</a>
-                                <a href="{% url 'delete_post' post.id %}" class="btn btn-red float-end m-1">Delete</a>
+                                <a href="{% url 'edit_post' post.id %}" class="btn btn-yellow btn-sm float-end m-1">
+                                    <span class="icon">
+                                        <i class="far fa-edit"></i>
+                                    </span>
+                                    <span class="">Edit Post</span>
+                                </a>
+                                <a href="{% url 'delete_post' post.id %}" class="btn btn-red btn-sm text-light float-end m-1">
+                                    <span class="icon">
+                                        <i class="fas fa-exclamation-triangle"></i>
+                                    </span>
+                                    <span class="text-uppercase">Delete Post</span>
+                                </a>
                         {% endif %}
                             </div>
                         </div>
@@ -52,12 +67,22 @@
                             <p class="card-subtitle"><small class="text-muted float-start">Posted by: {{post.author.first_name}}</small></p>
                         </div>
                         <div class="card-body">
-                            <p class="card-text">{{post.body|slice:":300"|safe}}</p>
+                            <p class="card-text">{{post.body|slice:":300"|safe}}...</p>
                         </div>
                         {% if request.user.is_superuser %}
                             <div class="card-footer">
-                                <a href="{% url 'edit_post' post.id %}" class="btn btn-yellow float-end m-1">Edit Post</a>
-                                <a href="{% url 'delete_post' post.id %}" class="btn btn-red text-light float-end m-1">Delete</a>
+                                <a href="{% url 'edit_post' post.id %}" class="btn btn-yellow btn-sm float-end m-1">
+                                    <span class="icon">
+                                        <i class="far fa-edit"></i>
+                                    </span>
+                                    <span class="">Edit Post</span>
+                                </a>
+                                <a href="{% url 'delete_post' post.id %}" class="btn btn-red btn-sm text-light float-end m-1">
+                                    <span class="icon">
+                                        <i class="fas fa-exclamation-triangle"></i>
+                                    </span>
+                                    <span class="text-uppercase">Delete Post</span>
+                                </a>
                             </div>
                         {% endif %}
                 {% endif %}
