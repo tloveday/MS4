@@ -10,5 +10,10 @@ def index(request):
 
 
 def our_team(request):
-    """ View for index page"""
-    return render(request, 'home/our_team.html')
+    """ View for coaches"""
+    coaches = Coach.objects.all()
+
+    context = {
+        'coaches': coaches
+    }
+    return render(request, 'home/our_team.html', context)
