@@ -16,5 +16,8 @@ class Coach(models.Model):
     image_url = models.URLField(max_length=1024, default="", blank=True)
     image = models.ImageField(default="", blank=True)
 
+    class Meta:
+        ordering = ['id']
+
     def __str__(self):
         return self.name
