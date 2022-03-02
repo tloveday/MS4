@@ -6,6 +6,7 @@ from django.shortcuts import (
     get_object_or_404
 )
 from django.contrib import messages
+from django.contrib.auth.decorators import login_required
 from .models import Post
 from .forms import PostForm
 
@@ -32,6 +33,7 @@ def blog_post(request, post_id):
     return render(request, 'blog/post.html', context)
 
 
+@login_required
 def add_post(request):
     # Superuser Only
     if not request.user.is_superuser:
@@ -60,6 +62,7 @@ def add_post(request):
     return render(request, template, context)
 
 
+@login_required
 def edit_post(request, post_id):
     # Superuser Access Only
     if not request.user.is_superuser:
@@ -91,6 +94,7 @@ def edit_post(request, post_id):
     return render(request, template, context)
 
 
+@login_required
 def delete_post(request, post_id):
     """ Superuser Access Only """
     if not request.user.is_superuser:
