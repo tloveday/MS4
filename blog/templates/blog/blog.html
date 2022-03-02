@@ -35,7 +35,7 @@
                         </div>
                         <div class="col-md-8">
                             <div class="card-body">
-                            <p class="card-text">{{post.body}}</p>
+                            <p class="card-text">{{post.body|slice:":140"|safe}}</p>
                             </div>
                         </div>
                         {% if request.user.is_superuser %}
@@ -48,11 +48,11 @@
                     </div>
                 {% else %}
                         <div class="card-header">
-                            <h5 class="card-title "><a class="text-reset text-decoration-none" href="{% url 'post' post.id %}">{{post.title}}</a></h5>
-                            <p class="card-subtitle"><small class="text-muted float-end">{{post.author.first_name}}</small></p>
+                            <h5 class="card-title text-center"><a class="text-reset text-decoration-none" href="{% url 'post' post.id %}">{{post.title}}</a></h5>
+                            <p class="card-subtitle"><small class="text-muted float-start">Posted by: {{post.author.first_name}}</small></p>
                         </div>
                         <div class="card-body">
-                            <p class="card-text">{{post.body}}</p>
+                            <p class="card-text">{{post.body|slice:":300"|safe}}</p>
                         </div>
                         {% if request.user.is_superuser %}
                             <div class="card-footer">

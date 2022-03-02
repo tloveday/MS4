@@ -61,7 +61,7 @@ def add_post(request):
 
 
 def edit_post(request, post_id):
-    # Superuser Access Only 
+    # Superuser Access Only
     if not request.user.is_superuser:
         messages.error(request, 'Sorry, You do not have permission to do that')
         return redirect(reverse('blog'))
@@ -96,7 +96,7 @@ def delete_post(request, post_id):
     if not request.user.is_superuser:
         messages.error(request, 'Sorry, You do not have permission to do that')
         return redirect(reverse('blog'))
-    """ Delete Post """
+    # Delete Post 
     post = get_object_or_404(Post, pk=post_id)
     post.delete()
     messages.success(request, 'Your post was deleted')
